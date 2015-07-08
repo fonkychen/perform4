@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+ <tiles-definitions>
+   <definition name="wechat/kpiauth" template="/wechat/common/login2.jsp">
+     
+   </definition>
+   
+   <definition name="wechat/selfmark" template="/wechat/common/layout.jsp">
+      <put-attribute name="title" value="每日自评" cascade="true"></put-attribute>
+      <put-attribute name="content" value="/wechat/score/selfmark.jsp"></put-attribute>
+      <put-attribute name="footer" value="/wechat/common/footer.jsp"></put-attribute>
+   </definition>
+   <definition name="wechat/randomcomment" template="/wechat/common/layout.jsp">
+      <put-attribute name="title" value="有缘点评" cascade="true"></put-attribute>
+      <put-attribute name="content" value="/wechat/score/randomcomment.jsp"></put-attribute>
+      <put-attribute name="footer" value="/wechat/common/footer.jsp"></put-attribute>
+   </definition>
+   <definition name="wechat/selfmark-detail" template="/wechat/common/layout.jsp">
+      <put-attribute name="title" value="绩效信息" cascade="true"></put-attribute>
+      <put-attribute name="content" value="/wechat/score/selfmark-detail.jsp"></put-attribute>
+      <put-attribute name="footer" value="/wechat/common/footer.jsp"></put-attribute>
+   </definition>
+   <definition name="wechat/weeklycomment" template="/wechat/common/layout.jsp">
+      <put-attribute name="title" value="主管点评" cascade="true"></put-attribute>
+      <put-attribute name="content" value="/wechat/score/weeklycomment.jsp"></put-attribute>
+      <put-attribute name="footer" value="/wechat/common/footer.jsp"></put-attribute>
+   </definition>
+   <definition name="wechat/dailyboard" template="/wechat/common/layout.jsp">
+      <put-attribute name="title" value="公事榜" cascade="true"></put-attribute>
+      <put-attribute name="content" value="/wechat/score/dailyboard.jsp"></put-attribute>
+      <put-attribute name="footer" value="/wechat/common/footer.jsp"></put-attribute>
+   </definition>
+   <!-- 
+   <definition name="wechat/teamreport" template="/wechat/common/layout.jsp">
+      <put-attribute name="title" value="团队日报" cascade="true"></put-attribute>
+      <put-attribute name="content" value="/wechat/score/teamreport.jsp"></put-attribute>
+      <put-attribute name="footer" value="/wechat/common/report_footer.jsp"></put-attribute>
+   </definition>
+   <definition name="wechat/viewreport" template="/wechat/common/layout.jsp">
+      <put-attribute name="title" value="团队日报" cascade="true"></put-attribute>
+      <put-attribute name="content" value="/wechat/score/viewreport.jsp"></put-attribute>
+      <put-attribute name="footer" value="/wechat/common/report_footer.jsp"></put-attribute>
+   </definition>
+   -->
+  
+ </tiles-definitions>

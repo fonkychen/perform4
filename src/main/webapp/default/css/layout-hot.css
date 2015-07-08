@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Judy
+ * @date    2015-05-14 09:20:16
+ *
+ */
+
+/*---------------------------------- Hot table ----------------------------------*/
+.lastQ {
+    float: right;
+    margin-right: 36px;
+
+    font-size: 14px;
+
+    color: #456;
+}
+.lastQ:hover {
+    text-decoration: underline;
+
+    color: #456;
+}
+.hot {
+    width: 93%;
+    margin: 0 3.5%;
+}
+.hot th,
+.hot td {
+    height: 45px;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+.hot th {
+    font-weight: bold;
+}
+.hot th a {
+    position: relative;
+}
+.hot-flower,
+.hot-egg {
+    position: relative;
+
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+}
+.hot-flower {
+    background: url(../images/icon-hot.png) 0 -30px no-repeat;
+}
+.hot-egg {
+    background: url(../images/icon-hot.png) 0 0 no-repeat;
+}
+.hot-flower sup,
+.hot-egg sup {
+    margin: -5px -30px 0 0;
+
+    font-size: 14px;
+
+    color: #50c8d7;
+}
+.hot .up {
+    position: absolute;
+    top: 2px;
+
+    margin-left: 0;
+
+    font-family: "Simsun";
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+}
+.hot a .up {
+    color: #fff;
+}
+.hot a:hover .up {
+    color: #bdc3c7;
+}
+.hot thead th {
+    height: 80px;
+}
+.hot thead th a {
+    font-family: "微软雅黑";
+    font-size: 24px;
+    font-weight: normal;
+}
+.hot thead th a:hover {
+    text-decoration: underline;
+}
+.hot thead th .c-kpired {
+    position: relative;
+}
+.hot thead th .c-kpired:hover {
+    color: #e33555;
+}
+.hot thead th .c-yellow:hover {
+    color: #ffb310;
+}
+.hot thead th a img {
+    margin-right: 5px;
+
+    vertical-align: text-top;
+}
+.hot tbody td {
+    position: relative;
+
+    vertical-align: middle;
+}
+.hot tbody .this-miniwrap {
+    z-index: 1;
+}
+.hot .miniwrap {
+    position: absolute;
+    top: 30px;
+    left: 60%;
+    z-index: 10;
+
+    display: none;
+    width: 202px;
+    height: 80px;
+    padding: 12px 0;
+
+    border: 1px solid #bdc3c7;
+    background: #fff;
+    background: rgba(255,255,255,.80);
+}
+
+.hot td:hover .miniwrap {
+    display: block;
+}
+
+.hot .miniwrap img {
+    width: 80px;
+    height: 80px;
+    margin-right: 6px;
+}
+
+.hot .miniwrap p {
+    font-size: 12px;
+    line-height: 1.7;
+
+    text-align: left;
+
+    color: #456;
+}
+
+.hot .miniwrap a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 58px 12px 0 0;
+
+    line-height: 22px;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 11px;
+    background: #e33555;
+}

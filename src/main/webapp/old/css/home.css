@@ -1,0 +1,571 @@
+@charset 'utf-8';
+/* CSS Document */
+
+.top {
+    height: 172px;
+    background: url(../images/top_topic.png) left center no-repeat;
+}
+.topTopic {
+    position: absolute;
+    right: 130px;
+    bottom: -10px;
+    width: 307px;
+    height: 87px;
+    background: url(../images/top_topic2.png) 0 0 no-repeat;
+}
+.wrap {
+    width: 990px;
+    height: auto;
+    margin: 0 auto;
+}
+/*--------------------------- left ---------------------------*/
+.left {
+    float: left;
+    width: 260px;
+}
+.left .ad_left {
+    position: relative;
+    width: 100%;
+    height: 75px;
+}
+.left .ad_left .rtCorner {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 66px;
+    height: 63px;
+}
+.left .ad_left .ltCorner {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 66px;
+    height: 63px;
+}
+.left .content {
+    width: 100%;
+    height: auto;
+}
+.left .content .top {
+    width: 100%;
+    height: 20px;
+    background: url(../images/left_contentbg_top.png) 0 0 no-repeat;
+}
+.left .content .btm {
+    width: 100%;
+    height: 20px;
+    background: url(../images/left_contentbg_btm.png) 0 0 no-repeat;
+}
+.left .content .body {
+    width: 100%;
+    height: auto;
+    background: url(../images/left_contentbg_body.png) 0 0 repeat;
+}
+.No_1 {
+    width: 100%;
+    height: 100px;
+}
+.No_1 .img {
+    float: left;
+    width: 107px;
+    height: 100%;
+    margin: 0 10px 0 20px;
+    _margin: 0 5px 0 10px;
+}
+.No_1 .info {
+    float: right;
+    width: 123px;
+}
+.No_1 .info li {
+    color: #4b1616;
+    line-height: 24px;
+}
+.btn_More {
+    width: 124px;
+    margin: 16px 68px 5px 68px;
+}
+.level {
+    width: 224px;
+    height: auto;
+    padding: 0 18px;
+    background: url(../images/line_home_left.png) center 124px no-repeat;
+}
+.level p {
+    text-align: center;
+    line-height: 26px;
+}
+.level .upgrade {
+    width: 80px;
+    margin: 8px 72px 20px 72px;
+}
+.level .daily {
+    float: left;
+    width: 92px;
+    margin: 8px 10px 0 10px;
+    _margin: 0 5px;
+}
+/*--------------------------- right ---------------------------*/
+
+.right {
+    float: right;
+    width: 716px;
+}
+.right .notice {
+    overflow: hidden;
+    width: 671px;
+    height: 44px;
+    padding: 31px 0 0 45px;
+    white-space: nowrap;
+    background: url(../images/icon_notice.png) 0 36px no-repeat;
+    text-shadow: 1px 1px 3px rgba(252, 238, 166, .8);
+    line-height: 44px;
+    behavior: url(ie-css3.htc);
+}
+.right .ranking {
+    width: 100%;
+    height: 468px;
+    background: url(../images/home_right_bg.png) 0 0 no-repeat;
+}
+.right .ranking .list {
+    width: 666px;
+    height: 412px;
+    margin: 2px 30px 2px 20px;
+    border-collapse: collapse;
+    border: none;
+}
+.right .ranking .list th, .right .ranking .list td {
+    height: 35px;
+    text-align: center;
+}
+.right .ranking .list td a {
+    position: relative;
+    display: block;
+    color: #6a3f1f;
+}
+.right .ranking .list td a:hover .mini {
+    display: block;
+}
+.right .ranking .list th {
+    position: relative;
+    height: 62px;
+}
+.right .ranking .list .top3 {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    color: #fff;
+    background: url(../images/icon_list_top3.png) 0 0 no-repeat;
+    line-height: 17px;
+}
+.right .ranking .list .listNumb {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    color: #4e4a3e;
+    background: url(../images/icon_list.png) 0 0 no-repeat;
+    line-height: 17px;
+}
+.right .ranking .alllist {
+    display: block;
+    width: 122px;
+    height: 29px;
+    margin: 13px auto 14px auto;
+    background: url(../images/icon_leaderboard.png) 0 0 no-repeat;
+}
+.right .ranking .alllist:hover {
+    background: url(../images/icon_leaderboard_hover.png) 0 0 no-repeat;
+}
+.right .right_ad01 {
+    float: left;
+    width: 240px;
+    height: 114px;
+    margin: 0 8px 0 0;
+    _margin: 0 4px 0 0;
+}
+.right .right_ad02 {
+    float: left;
+    width: 220px;
+    height: 114px;
+    background: url(../images/home_right_ad03.gif) 0 0 no-repeat;
+}
+.right .right_ad02 p {
+    margin: 72px;
+    text-align: center;
+    text-indent: 5px;
+    font-family: 'Microsoft Yahei', 'SimSun', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+/*--------------------------- Login ---------------------------*/
+
+.Login {
+    width: 410px;
+    height: 445px;
+    margin: 4% auto;
+    background: url(../images/login_bg.png) 0 0 no-repeat;
+}
+.Login table {
+    float: left;
+    width: 70%;
+    height: 50%;
+    margin: 32% 15% 18% 15%;
+}
+.Login .input_login {
+    width: 90%;
+    height: 34px;
+    padding: 0 10px;
+    color: #6a3f1f;
+    border: 1px solid #e6b02c;
+    background: #fff;
+    font-size: 14px;
+    line-height: 34px;
+}
+.Login .input_login:focus {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    outline: none;
+    -webkit-box-shadow: 0 0 3px 1px rgba(230, 176, 44, .5);
+    -moz-box-shadow: 0 0 3px 1px rgba(230, 176, 44, .5);
+    box-shadow: 0 0 3px 1px rgba(230, 176, 44, .5);
+    behavior: url(ie-css3.htc);
+}
+.Login table td .a_pawd {
+    float: right;
+    color: #c6462c;
+}
+.Login table td .a_pawd:hover {
+    text-decoration: underline;
+}
+.btn_login {
+    display: block;
+    width: 122px;
+    height: 29px;
+    background: url(../images/btn_login.png) 0 0 no-repeat;
+}
+.btn_login:hover {
+    background: url(../images/btn_login2.png) 0 0 no-repeat;
+}
+.checkbox_login {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    vertical-align: bottom;
+    border: 1px solid #e6b02c;
+    background: #fff;
+    -webkit-appearance: none;
+    appearance: none;
+    behavior: url(ie-css3.htc);
+}
+.checkbox_login:hover {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-box-shadow: 0 0 3px 1px rgba(230, 176, 44, .5);
+    -moz-box-shadow: 0 0 3px 1px rgba(230, 176, 44, .5);
+    box-shadow: 0 0 3px 1px rgba(230, 176, 44, .5);
+    behavior: url(ie-css3.htc);
+}
+.checkbox_login:checked::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: url(../images/checkbox_checked.png);
+}
+.checkbox_login:focus {
+    outline: none;
+}
+/*--------------------------- 查看列国 ---------------------------*/
+
+.Country {
+    position: relative;
+    top: 5%;
+    left: 50%;
+    width: 460px;
+    height: 440px;
+    margin: 0 0 0 -250px;
+    padding: 143px 20px 30px 20px;
+    background: url(../images/bg_country.png) 0 0 no-repeat;
+}
+.Country p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 260%;
+}
+.Country dl {
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 130px;
+    padding: 10px 0;
+}
+.Country dl dt, .Country dl dd {
+    float: left;
+    width: 63px;
+    line-height: 200%;
+}
+.Country dl dt {
+    margin: 0 7px 0 10px;
+    color: #bab2a7;
+}
+.Country dl dd {
+    margin-right: 10px;
+}
+.Country .next {
+    margin: 10px 195px;
+}
+.Country .list {
+    width: 76%;
+    height: 24px;
+    margin: 20px 13% 0 12%;
+}
+.Country .list li {
+    float: left;
+}
+.Country .list li a {
+    display: block;
+    width: 46px;
+    height: 100%;
+    margin: 0 20px;
+    text-align: center;
+    color: #8e500f;
+    background: url(../images/btn_04_46.png) 0 0 no-repeat;
+    font-weight: bold;
+    line-height: 24px;
+}
+.Country .list li a:hover {
+    background: url(../images/btn_04_46_hover.png) 0 0 no-repeat;
+}
+.Country .list li a:active {
+    background: url(../images/btn_04_46_active.png) 0 0 no-repeat;
+}
+.Country .list li a:focus {
+    outline: none;
+}
+.Country .close {
+    position: absolute;
+    top: 95px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    background: url(../images/icon_close.png) 0 0 no-repeat;
+}
+.Country .arrow_pre, .Country .arrow_next {
+    position: absolute;
+    top: 400px;
+    width: 9px;
+    height: 15px;
+}
+.Country .arrow_pre {
+    left: 10px;
+    background: url(../images/arrow_red_1.png);
+}
+.Country .arrow_next {
+    right: 10px;
+    background: url(../images/arrow_red_2.png);
+}
+/*--------------------------- 得胜鼓 ---------------------------*/
+
+.drum {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    width: 350px;
+    height: 190px;
+    margin: 0 0 0 -185px;
+    padding: 79px 10px 10px 10px;
+    background: url(../images/bg_drum.png) 0 0 no-repeat;
+}
+.drum .close {
+    position: absolute;
+    top: 15px;
+    right: -10px;
+    width: 34px;
+    height: 34px;
+    background: url(../images/icon_close.png) 0 0 no-repeat;
+}
+.drum textarea {
+    position: absolute;
+    width: 330px;
+    height: 140px;
+    padding: 10px 10px 0 10px;
+    color: #6a3906;
+    border: none;
+    font-weight: bold;
+    line-height: 170%;
+}
+.drum textarea:focus {
+    outline: 1px solid #d99e0b;
+}
+.drum .btn_04 {
+    position: absolute;
+    bottom: 15px;
+    margin: 6px 0 0 140px;
+}
+/*--------------------------- 消息中心 ---------------------------*/
+
+.MessageCenter {
+    position: relative;
+    top: 15%;
+    left: 50%;
+    width: 652px;
+    height: 455px;
+    margin: 0 0 0 -340px;
+    background: #fff;
+}
+.MessageCenter .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 34px;
+    height: 34px;
+    background: url(../images/icon_close.png) 0 0 no-repeat;
+}
+.MessageCenter .SendMessage {
+    float: left;
+    width: 100%;
+    height: 90px;
+    margin: 45px 0 0 0;
+    background: url(../images/notice_bg.jpg) 0 0 no-repeat;
+}
+.MessageCenter .Actives {
+    float: left;
+    width: 612px;
+    height: 80px;
+    margin: 24px 20px 16px 20px;
+}
+.MessageCenter .Actives li {
+    float: left;
+    overflow: hidden;
+    width: 102.4px;
+    height: 80px;
+    margin: 0 10px;
+}
+.MessageCenter .Actives li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.MessageCenter .Actives li a img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.MessageCenter .Actives .MoreActives {
+    width: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+.MessageCenter .Actives .MoreActives a {
+    color: #8b591d;
+}
+.MessageCenter .NewMessage {
+    float: left;
+    width: 100%;
+    height: 200px;
+}
+.MessageCenter .NewMessage img {
+    height: 16px;
+    margin: 0 0 14px 27px;
+}
+.MessageCenter .NewMessage .Messages {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 607px;
+    height: 140px;
+    margin: 0 15px 0 30px;
+}
+.MessageCenter .NewMessage .Messages li:before, .MessageCenter .NewMessage .Messages li:after {
+    display: table;
+    content: '';
+}
+.MessageCenter .NewMessage .Messages li:after {
+    clear: both;
+}
+.MessageCenter .NewMessage .Messages li {
+    margin: 0 0 8px 0;
+    color: #b29551;
+    line-height: 200%;
+    *zoom: 1;
+    /*ie6,7*/
+}
+.MessageCenter .NewMessage .Messages li .Mesg_class {
+    float: left;
+    width: 40px;
+}
+.MessageCenter .NewMessage .Messages li .Mesg_content {
+    float: left;
+    width: 440px;
+}
+.MessageCenter .NewMessage .Messages li .Mesg_time {
+    float: right;
+    width: 95px;
+    margin: 0 15px 0 0;
+    color: #a0a0a0;
+}
+.MessageCenter .NewMessage .Messages .Color_Red {
+    color: #c0392b;
+}
+.MessageCenter .NewMessage .Messages .Color_Blue {
+    color: #459faa;
+}
+/*--------------------------- bottom ---------------------------*/
+
+.copyright_home {
+    width: 100%;
+    height: 100px;
+    margin: 20px auto 50px auto;
+    text-align: center;
+    color: #956922;
+    background: url(../images/copyright_bg.png) center 25px no-repeat;
+    line-height: 100px;
+}
+/*--------------------------- 每日签到 ---------------------------*/
+
+.signin {
+    position: relative;
+    top: 15%;
+    left: 50%;
+    width: 500px;
+    height: 360px;
+    margin: 0 0 0 -250px;
+    background: url(../images/bg_signin.png) 0 0 no-repeat;
+}
+.signin .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    background: url(../images/icon_close.png) 0 0 no-repeat;
+}
+.signin .signin_table {
+    float: left;
+    width: 80%;
+    height: 75%;
+    margin: 10% 10% 15% 10%;
+}
+.signin .signin_table th {
+    padding: 5px;
+    text-align: left;
+    color: #c0392b;
+    font-size: 14px;
+    font-weight: bold;
+}
+.signin .signin_table th:first-child {
+    text-align: right;
+}
+.signin .signin_table td {
+    padding: 5px;
+    color: #8e500f;
+}
+.signin .signin_table td p {
+    margin-bottom: 5px;
+    line-height: 170%;
+}

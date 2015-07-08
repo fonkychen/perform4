@@ -1,0 +1,626 @@
+@charset'utf-8';
+/* CSS Document */
+/*--------------------------- 基础 ---------------------------*/
+
+html {
+    font-family: 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif;
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    color: #000;
+    background-color: #efeff4;
+    line-height: 1.5;
+    -webkit-overflow-scrolling: touch;
+}
+
+body > div,
+body > p,
+body > header {
+    font-size: 1.4rem;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+section {
+    background: #fff;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden],
+template {
+    display: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #08c;
+    background: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:active {
+    outline: 0;
+}
+
+a:active {
+    color: #069;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    color: #000;
+    background: #ff0;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+pre {
+    overflow: auto;
+    margin: 0;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    color: inherit;
+    font: inherit;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type='search'] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: textfield;
+}
+
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+fieldset {
+    margin: 0 2px;
+    padding: .35em .625em .75em;
+    border: 1px solid #c0c0c0;
+}
+
+legend {
+    padding: 0;
+    border: 0;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+    margin: 0;
+}
+
+ul,
+ol,
+li,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none outside none;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+    line-height: 2;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #ccc;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #ccc;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*--------------------------- 基础end ---------------------------*/
+/*--------------------------- 常用 ---------------------------*/
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: '';
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+    /*ie6,7*/
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.bgfff {
+    background-color: #fff;
+}
+
+.bgnone {
+    background: none;
+}
+
+.blank10 {
+    clear: both;
+    width: 100%;
+    height: 10px;
+}
+
+.blank20 {
+    clear: both;
+    width: 100%;
+    height: 20px;
+}
+/*--------------------------- 常用end ---------------------------*/
+/*--------------------------- outside ---------------------------*/
+
+.topbar40 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 20px;
+}
+
+.topbar40 img {
+    width: 100%;
+    height: 20px;
+    vertical-align: top;
+}
+
+.header,
+.wrap-page {
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.header {
+    z-index: 900;
+    top: 20px;
+    height: 44px;
+    background-color: #22292c;
+    line-height: 44px;
+}
+
+.header-left {
+    width: 88px;
+    height: 44px;
+    text-align: left;
+    color: #fff;
+}
+
+.header-right {
+    width: 88px;
+    height: 44px;
+    padding-right: 10px;
+    text-align: right;
+    color: #fff;
+}
+
+.header-icon {
+    width: 44px;
+    height: 44px;
+    color: #fff;
+}
+
+.header a {
+    color: #fff;
+}
+
+.header a:active {
+    color: #eee;
+}
+
+h1 {
+    height: 44px;
+    margin-right: 100px;
+    margin-left: 100px;
+    text-align: center;
+    color: #fff;
+    line-height: 44px;
+}
+
+.wrap-page {
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.wrap-page {
+    padding-bottom: 44px;
+}
+/*--------------------------- outside end ---------------------------*/
+
+.fixed-btm {
+    position: fixed;
+    z-index: 900;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.footer {
+    height: 43px;
+    text-align: center;
+    color: #4b4b4b;
+    border-top: 1px solid #c5c5c5;
+    background: #fafafa;
+}
+
+.footer ul {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.footer ul li {
+    float: left;
+    width: 25%;
+    height: 100%;
+    border-left: 1px solid #c5c5c5;
+    font-size: 1.4rem;
+    line-height: 43px;
+}
+
+.footer ul li:first-child {
+    border: none;
+}
+
+.footer ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #4b4b4b;
+}
+
+.footer ul li a:active {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.footer ul .w33 {
+    width: 33.3%;
+}
+
+.footer ul .w50 {
+    width: 50%;
+}
+/*--------------------------- colors ---------------------------*/
+
+.color-red {
+    color: #cc4445;
+}
+
+.color-gray {
+    color: #a3a3a3;
+}
+
+.bgcolor-green {
+    background-color: #9bc63e;
+}
+
+.bgcolor-violet {
+    background-color: #7055a0;
+}
+
+.bgcolor-coral {
+    background-color: #ff3b30;
+}
+
+.bgcolor-fire {
+    background-color: #f90;
+}
+
+.bgcolor-blue {
+    background-color: #69f;
+}
+
+.bgcolor-green2 {
+    background-color: #093;
+}
+
+.sec-border {
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.color01 {
+    background: #7ce;
+}
+
+.color02 {
+    background: #ac0;
+}
+
+.color03 {
+    background: #ff8080;
+}
+
+.color04 {
+    background: #27bbac;
+}
+
+.color05 {
+    background: #fb5;
+}
+
+.color06 {
+    background: #be67bd;
+}
+
+.color07 {
+    background: #ffb3ca;
+}
+
+.color08 {
+    background: #fef455;
+}
+
+.color09 {
+    background: #7ecfd3;
+}
+
+.color10 {
+    background: #ee8968;
+}
+
+.color11 {
+    background: #f1d335;
+}
+
+.color12 {
+    background: #aaaecc;
+}
+
+.color13 {
+    background: #d8d258;
+}
+
+.color14 {
+    background: #e28eaf;
+}
+
+.color15 {
+    background: #bce2e3;
+}
+
+.color16 {
+    background: #9cd088;
+}
+
+.color17 {
+    background: #d7e0e5;
+}
+/*--------------------------- colors end ---------------------------*/
+/*colors*/
+/*
+layout
+border:#dfdfdf;
+border:#ccc;
+font
+color:#000;
+color:#a3a3a3;
+color:#cc4445;
+color:#0f82ff;
+background: #4BD763;
+*/

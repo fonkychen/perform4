@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+ <definition name="connect-template" extends="default-template">
+   <put-attribute name="head" value="/default/connect/head.jsp"></put-attribute>
+ </definition>
+ <definition name="connect/reward/index" extends="connect-template">
+    <put-attribute name="title" value="悬赏榜 —— 为您效劳，只需要一点点UB" cascade="true"></put-attribute>
+    <put-attribute name="content" value="/default/connect/reward.jsp"></put-attribute>
+ </definition>
+ <definition name="connect/reward/new" extends="connect-template">
+    <put-attribute name="title" value="发布悬赏 —— 一点UB 招募帮手" cascade="true"></put-attribute>
+    <put-attribute name="content" value="/default/connect/newreward.jsp"></put-attribute>
+ </definition>
+ <definition name="connect/reward/item-*" extends="connect-template">
+    <put-attribute name="title" value="发布悬赏 —— 一点UB 招募帮手" cascade="true"></put-attribute>
+    <put-attribute name="content" value="/default/connect/rewarditem.jsp"></put-attribute>
+ </definition>
+  <definition name="connect/task/index" extends="connect-template">
+    <put-attribute name="title" value="任务中心 —— 多做一件，UB多一点" cascade="true"></put-attribute>
+    <put-attribute name="content" value="/default/connect/task.jsp"></put-attribute>
+ </definition>
+ <definition name="connect/task/new" extends="connect-template">
+    <put-attribute name="title" value="发布任务 —— 一点UB 招募帮手" cascade="true"></put-attribute>
+    <put-attribute name="content" value="/default/connect/newtask.jsp"></put-attribute>
+ </definition>
+ <definition name="connect/task/item-*" extends="connect-template">
+    <put-attribute name="title" value="发布任务 —— 一点UB 招募帮手" cascade="true"></put-attribute>
+    <put-attribute name="content" value="/default/connect/taskitem.jsp"></put-attribute>
+ </definition>
+ <definition name="connect/drum/index" extends="connect-template">
+    <put-attribute name="title" value="得胜鼓 —— 战鼓擂擂捷报传" cascade="true"></put-attribute>
+    <put-attribute name="content" value="/default/connect/drum.jsp"></put-attribute>
+ </definition>
+</tiles-definitions>

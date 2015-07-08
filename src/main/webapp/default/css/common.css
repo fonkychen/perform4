@@ -1,0 +1,586 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Judy
+ * @date    2015-04-14 15:26:23
+ *
+ */
+/*---------------------------------- Topbar ----------------------------------*/
+.topbar-wrap {
+    width: 100%;
+    height: 54px;
+
+    background: #2f2f2f;
+}
+
+.topbar {
+    position: relative;
+
+    height: 100%;
+
+    line-height: 54px;
+}
+
+.logo {
+    width: 120px;
+    height: 100%;
+
+    background: url(../images/logo.png) left center no-repeat;
+}
+
+.topnav {
+    height: 100%;
+    margin: 0 20px;
+}
+
+.topnav li {
+    float: left;
+    margin: 0 12px;
+}
+.topnav li a {
+    display: block;
+
+    color: #fff;
+}
+.topnav li a:hover {
+    font-weight: bold;
+}
+
+.topbar span {
+    margin: 0 7px;
+
+    font-family: Simsun;
+}
+
+.topbar a:hover {
+    color: #50c8d7;
+}
+
+.topbar .line-1 {
+    font-size: 18px;
+
+    color: #656565;
+}
+.icon-notification-bell {
+    float: right;
+    width: 14px;
+    height: 16px;
+    margin: 19px 14px 19px 6px;
+    *+float: none;
+    *+margin: 0px 14px 0px 6px;
+}
+.topbar .notice {
+    position: absolute;
+    top: 54px;
+    right: 132px;
+    z-index: 10;
+
+    display: none;
+    width: 124px;
+
+    border: 1px solid #efefef;
+    background: #fff;
+}
+.topbar .notice li {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+
+    line-height: 30px;
+}
+.topbar .notice .btmline {
+    border-bottom: 1px solid #efefef;
+}
+.topbar .notice .mycenter a {
+    color: #d83321;
+}
+.topbar .notice li a {
+    display: block;
+    padding: 0 10px 0 16px;
+
+    color: #666;
+}
+.topbar .notice li a:hover {
+    color: #50c8d7;
+}
+.topbar .notice li a span {
+    float: right;
+    margin: 0;
+
+    font-weight: bold;
+
+    color: #d83321;
+}
+
+.topbar .notice .first-arrow > a:after {
+    position: absolute;
+    top: -10px;
+    right: 27px;
+
+    width: 0;
+    height: 0;
+
+    content: "";
+
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 7px solid transparent;
+}
+
+/*---------------------------------- Footer ----------------------------------*/
+
+.footer-wrap {
+    width: 100%;
+    height: 100px;
+
+    background: #3d3d3d;
+}
+
+.footer {
+    width: 980px;
+    height: 40px;
+    padding: 30px 10px;
+}
+
+.footer-info {
+    width: 60%;
+
+    color: #a6a6a6;
+}
+
+.footer span {
+    margin: 0 7px;
+
+    font-family: Simsun;
+    line-height: 1;
+}
+
+.footer a {
+    margin: 1px 0 12px 0;
+
+    color: #a6a6a6;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer .line-1 {
+    font-size: 18px;
+}
+
+/*---------------------------------- 侧边栏组件 ----------------------------------*/
+.sidemodul {
+    position: fixed;
+    bottom: 105px;
+    left: 50%;
+
+    margin-left: 510px;
+}
+.sidemodul a {
+    position: relative;
+
+    display: block;
+    width: 48px;
+    height: 24px;
+    padding: 8px 0;
+    margin-bottom: 5px;
+
+    line-height: 24px;
+
+    -webkit-transition: all .3s ease;
+       -moz-transition: all .3s ease;
+         -o-transition: all .3s ease;
+            transition: all .3s ease;
+    text-align: center;
+
+    color: #fff;
+    background-color: #cfcfcf;
+}
+
+.sidemodul a:hover {
+    color: #50c8d7;
+}
+
+
+.sidemodul a:first-child {
+    display: inline-block;
+    height: 32px;
+    padding: 0;
+    margin-top: 55px;
+    *+margin-bottom: 2px;
+
+    background: #cfcfcf;
+}
+.sidemodul a:first-child {
+    *zoom: expression(
+          this.runtimeStyle.zoom="1",
+          this.appendChild( document.createElement("small") ).className="before"
+         );
+}
+.sidemodul a:first-child:before,
+.sidemodul a:first-child .before {
+    position: absolute;
+    top: -14px;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    content: "";
+
+    border-right: 24px solid transparent;
+    border-bottom: 14px solid #cfcfcf;
+    border-left: 24px solid transparent;
+}
+.sidemodul a:first-child img {
+    *+margin-top: 5px;
+}
+.sidemodul .qrcode .qrcode2 {
+    position: absolute;
+    top: -38px;
+    left: 53px;
+
+    display: none;
+}
+.sidemodul .qrcode:hover .qrcode2 {
+    display: block;
+}
+.sidemodul .qrcode .qrcode2 img {
+    width: 120px;
+    height: 120px;
+}
+
+/*---------------------------------- Navbar ----------------------------------*/
+.navbar {
+    width: 954px;
+    height: 112px;
+    padding: 20px 20px 26px 26px;
+    margin: 20px auto;
+}
+.navbar > div {
+    *+width:294px;
+}
+.nav-lv1 {
+    float: left;
+    width: 660px;
+    height: 100%;
+}
+.nav-lv1 li {
+    position: relative;
+    width: 100%;
+    height: 14px;
+    margin-bottom: 18px;
+
+    font-size: 14px;
+    line-height: 1;
+}
+.nav-lv1 li .nav-lv2 {
+    width: 100%;
+}
+.nav-lv1 li .nav-lv2 li {
+    float: left;
+    width: 85px;
+    margin-right: 10px;
+
+    color: #ababab;
+}
+.nav-lv1 li .nav-lv2 li a {
+    color: #5e5e5e;
+}
+.nav-lv1 li .nav-lv2 li a:hover,
+.nav-lv1 li .nav-lv2 .thispage a {
+    font-weight: bold;
+
+    color: #50c8d7;
+}
+.nav-lv1 li .nav-lv2 li sup {
+    position: absolute;
+    top: -3px;
+
+    margin-left: 3px;
+
+    font-family: Arial;
+    font-size: 10px;
+
+    color: #f30;
+}
+.username {
+    width: 80px;
+    font-size: 13px;
+    line-height: 112px;
+
+    color: #ababab;
+    text-align: right;
+}
+.userheader {
+    display: block;
+    width: 58px;
+    height: 58px;
+    margin: 26px 40px 26px 12px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+}
+.userheader img {
+    width: 58px;
+    height: 58px;
+}
+.userscore {
+    width: 100px;
+    height: 66px;
+    margin: 23px 0;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: #5e5e5e;
+}
+
+/*---------------------------------- Other ----------------------------------*/
+h2 {
+    padding: 28px 0 28px 27px;
+
+    font-family: "Simsun";
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #456;
+}
+
+/*---------------------------------- Notice ----------------------------------*/
+
+.notice-all {
+    width: 940px;
+    padding: 18px 30px;
+}
+.notice-all li {
+    width: 922px;
+    height: 15px;
+    padding-left: 18px;
+    margin-bottom: 32px;
+    clear: both;
+
+    background: url(../images/notice-li-bg.png) left center no-repeat;
+
+    font-size: 14px;
+}
+.notice-all li a {
+    display: block;
+    float: left;
+    width: 80%;
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.notice-all li a:hover {
+    color: #f63;
+}
+.notice-all li span {
+    float: right;
+    width: 80px;
+
+    color: #959ea7;
+}
+
+/*---------------------------------- page ----------------------------------*/
+.page {
+    width: 96%;
+    height: 40px;
+    padding: 18px 0;
+    margin: 20px 2%;
+
+    border-top: 1px solid #f1f3f5;
+}
+.page li {
+    float: left;
+    height: 40px;
+    margin-right: 10px;
+}
+.page li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+    font-style: italic;
+    line-height: 40px;
+
+    text-align: center;
+
+    color: #99a1a7;
+    border-radius: 4px;
+    background: #f1f3f5;
+}
+.page li a:hover,
+.page li .thispage {
+    color: #fff;
+    background: #f05b72;
+}
+.page li span {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    font-family: Simsun;
+    line-height: 40px;
+
+    text-align: center;
+    letter-spacing: -3px;
+}
+.page li:last-child {
+    float: right;
+}
+.page li:last-child a,
+.page li:first-child a {
+    width: 160px;
+}
+.page .last-child {
+    float: right;
+}
+.page .last-child a {
+    width: 160px;
+}
+
+.tips {
+    width: 94%;
+    margin: 40px 3%;
+
+    font-size: 14px;
+    line-height: 2;
+
+    color: #959ea7;
+}
+.tips dt {
+    font-weight: bold;
+}
+
+
+/*---------------------------------- 通用表格 ----------------------------------*/
+.table-ub {
+    width: 94.8%;
+    margin: 20px 2.6%;
+
+    border: 1px solid #e6e6e6;
+}
+.table-ub td,
+.table-ub th {
+    height: 35px;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    border-top: 1px solid #e6e6e6;
+}
+.table-ub th {
+    color: #bdc3c7;
+}
+
+.linetext {
+    width: 94.4%;
+    height: 14px;
+    margin: 20px 2.8%;
+
+    text-align: center;
+
+    background: url(../images/linetext-bg.png) center repeat-x;
+}
+.linetext span {
+    display: inline-block;
+    padding: 0 20px;
+
+    font-size: 14px;
+    line-height: 1;
+
+    background: #fff;
+}
+/*---------------------------------- PK ----------------------------------*/
+.pk-wrap {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    z-index: 100;
+
+    display: none;
+    width: 480px;
+    height: 320px;
+    margin: -160px 0 0 -240px;
+    overflow: hidden;
+
+    border: 1px solid #67d1df;
+    background: #fff;
+    box-shadow: 0 2px 3px rgba(0,0,0,.3);
+}
+.pk-wrap .fl {
+    position: relative;
+
+    width: 33.3%;
+    height: 160px;
+    margin-top: 30px;
+
+    text-align: center;
+}
+.pk-header {
+    width: 66px;
+    height: 66px;
+}
+.pk-name {
+    margin: 10px 0;
+
+    font-size: 14px;
+}
+.pk-numb {
+    position: absolute;
+    left: 50%;
+
+    display: block;
+    width: 54px;
+    height: 31px;
+    margin: 10px 0 10px -27px;
+
+    font-size: 26px;
+
+    text-indent: 5px;
+    letter-spacing: 15px;
+
+    color: #e4345b;
+    background: url(../images/pk-numb-bg.png) 0 0 no-repeat;
+}
+.pk-icon {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin-left: -21px;
+
+    font-size: 24px;
+    line-height: 42px;
+
+    color: #fff;
+    border-radius: 21px;
+    background: #67d1df;
+}
+.pk-result {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+
+    width: 80px;
+    height: 40px;
+    margin-left: -40px;
+}
+.pk-weibo {
+    width: 70%;
+    height: 30px;
+    margin: 0 15%;
+
+    color: #959ea7;
+}
+.pk-wrap .btn-red {
+    margin: 20px 193px 0 193px;
+}

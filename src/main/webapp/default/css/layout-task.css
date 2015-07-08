@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Judy
+ * @date    2015-06-15 14:00:41
+ *
+ */
+/*---------------------------------- 悬赏榜 ----------------------------------*/
+.table-rewrad .a-ok {
+    font-weight: bold;
+
+    color: #f05b72;
+}
+.table-rewrad .a-ok:hover {
+    text-decoration: underline;
+
+    color: #e33555;
+}
+.table-rewrad .a-ing {
+    font-weight: bold;
+
+    color: #50c8d7;
+}
+.table-rewrad .a-ing:hover {
+    text-decoration: underline;
+
+    color: #4ac0cf;
+}
+/*---------------------------------- 新悬赏 ----------------------------------*/
+.relative2 {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+.myub-expend {
+    width: 50%;
+    margin: 40px 25%;
+}
+.myub-expend td {
+    width: 16%;
+    height: 50px;
+
+    font-size: 14px;
+    line-height: 3;
+
+    vertical-align: top;
+}
+.myub-expend td + td {
+    width: 84%;
+
+    text-align: right;
+}
+.myub-expend td input,
+.myub-expend td textarea,
+.myub-expend td select {
+    width: 90%;
+    height: 34px;
+    padding: 0 5px;
+    margin-bottom: 14px;
+
+    line-height: 34px;
+
+    border: 1px solid #e5e5e5;
+}
+.myub-expend td textarea {
+    height: 84px;
+
+    line-height: 1.7;
+}
+.myub-expend td .arrow {
+    background: url(../images/arrow-select.png) 96% center no-repeat;
+}
+.myub-expend td button {
+    margin-left: 32px;
+}
+.myub-expend .thistd {
+    z-index: 10;
+}
+.select-ul {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    z-index: 20;
+
+    display: none;
+    width: 90%;
+    padding: 0 5px;
+
+    border: 1px solid #50c8d7;
+    background: #fff;
+}
+.select-ul li {
+    height: 34px;
+
+    line-height: 34px;
+}
+.select-ul li a {
+    display: block;
+    width: 100%;
+    padding: 0 5px;
+    margin-left: -5px;
+
+    text-align: left;
+}
+.select-ul li a:hover {
+    color: #fff;
+    background: #50c8d7;
+}
+
+/*---------------------------------- 悬赏详情 ----------------------------------*/
+.w94p {
+    width: 94.4%;
+    margin-right: 2.8%;
+    margin-left: 2.8%;
+}
+.btn-back {
+    position: relative;
+
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-left: 9px;
+
+    font-size: 14px;
+    line-height: 30px;
+
+    text-indent: 14px;
+
+    color: #fff;
+    background-color: #f05b72;
+}
+.btn-back:hover {
+    color: #fff;
+    background-color: #e33555;
+}
+.btn-back {
+    *zoom: expression(
+          this.runtimeStyle.zoom="1",
+          this.appendChild( document.createElement("small") ).className="before"
+         );
+}
+.btn-back:before,
+.btn-back .before {
+    position: absolute;
+    top: 0;
+    left: -9px;
+
+    width: 0;
+    height: 0;
+
+    content: "";
+
+    border-top: 15px solid transparent;
+    border-right: 9px solid #f05b72;
+    border-bottom: 15px solid transparent;
+}
+.btn-back:hover:before,
+.btn-back:hover .before {
+    border-right: 9px solid #e33555;
+}
+.line-back {
+    width: 100%;
+    margin: 8px 0;
+
+    border: none;
+    border-top: 1px solid #e6e6e6;
+}
+.reward-question {
+    width: 100%;
+    margin: 20px 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+.reward-question .fl {
+    width: 85%;
+    margin-left: 1%;
+}
+.reward-question-top {
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+
+    line-height: 20px;
+
+    white-space: nowrap;
+
+    color: #bdc3c7;
+}
+.icon-question,
+.icon-answer {
+    float: left;
+    height: 20px;
+
+    text-indent: 30px;
+
+    color: #456;
+    background: url(../images/icon-reward.png) 0 0 no-repeat;
+}
+.icon-answer {
+    background: url(../images/icon-reward.png) 0 -30px no-repeat;
+}
+.reward-text {
+    width: 100%;
+    height: 130px;
+    margin: 20px 0;
+
+    line-height: 1.7;
+
+    color: #959ea7;
+    border: 1px solid #e6e6e6;
+}
+.reward-question .fr a {
+    margin-right: 42px;
+
+    font-weight: bold;
+    line-height: 4;
+
+    color: #50c8d7;
+}
+.placeholder {
+    display: block;
+    width: 38px;
+    height: 100%;
+}
+/*---------------------------------- 任务详情 ----------------------------------*/
+.task-question {
+    width: 99%;
+    margin-bottom: 20px;
+    margin-left: 1%;
+
+    font-size: 14px;
+}
+.task-question .fl {
+    width: 10%;
+}
+.task-question .fl + .fl {
+    width: 76%;
+}
+.task-type-recycle,
+.task-type-seckill {
+    display: block;
+    width: 54px;
+    height: 54px;
+    margin-top: 36px;
+}
+.task-type-recycle {
+    background: url(../images/icon-task-type.png) 0 0 no-repeat;
+}
+.task-type-seckill {
+    background: url(../images/icon-task-type.png) 0 -64px no-repeat;
+}
+.task-title {
+    margin: 36px 0 20px 0;
+    overflow: hidden;
+
+    white-space: nowrap;
+}
+.task-title .task-info {
+    color: #bdc3c7;
+}
+.task-detail {
+    line-height: 1.7;
+
+    color: #959ea7;
+}
+.task-text {
+    width: 100%;
+    height: 130px;
+    margin: 20px 0;
+
+    line-height: 1.7;
+
+    color: #959ea7;
+    border: 1px solid #e6e6e6;
+}
+.task-question .fr a {
+    margin-right: 42px;
+
+    font-weight: bold;
+    line-height: 4;
+
+    color: #50c8d7;
+}
+
+/*---------------------------------- 得胜鼓 ----------------------------------*/
+
+.drumevent-text {
+    width: 74%;
+    height: 100px;
+    padding: 5px;
+    margin: 0 13%;
+
+    border: 1px solid #e6e6e6;
+}
+.wordscount {
+    display: block;
+    width: 74%;
+    margin: 0 13%;
+
+    line-height: 1.5;
+
+    color: #959ea7;
+}

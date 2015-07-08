@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="126" height="23" viewBox="0 0 126 23">
+  <defs>
+    <style>
+
+      .cls-2 {
+        font-size: 30px;
+      }
+
+      .cls-3 {
+        text-anchor: middle;
+        font-size: 30px;
+        font-family: "FZTieJinLiShu-S17S";
+      }
+    </style>
+  </defs>
+  <text class="cls-2" y="22px"><tspan x="50%" class="cls-3">信息安全</tspan></text>
+</svg>

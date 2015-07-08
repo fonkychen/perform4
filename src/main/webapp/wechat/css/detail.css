@@ -1,0 +1,971 @@
+@charset'utf-8';
+/* CSS Document */
+/*--------------------------- Login ---------------------------*/
+
+.login {
+    position: relative;
+    left: 50%;
+    float: left;
+    overflow: hidden;
+    width: 500px;
+    height: 570px;
+    margin-top: 10%;
+    margin-left: -250px;
+    border-collapse: collapse;
+    border: none;
+    background-image: url(../images/login-bg.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    font-size: 2.6rem;
+}
+
+.login tr,
+.login td {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.login p {
+    width: 80%;
+    margin: 100px 10% 10px 10%;
+    line-height: 1.5;
+}
+
+.login input {
+    width: 90%;
+    height: 80px;
+    margin: 10px 5%;
+    padding: 0 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 6px;
+}
+
+.login button {
+    width: 50%;
+    height: 60px;
+    margin: 40px 25%;
+    text-align: center;
+    letter-spacing: 4px;
+    color: #fff;
+    border: 1px solid #cc4445;
+    border-radius: 3px;
+    background: #ec5050;
+}
+
+.login .p-center {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 3.6rem;
+}
+/*
+.wrap-page2 {
+    width: 100%;
+    height: 100%;
+}
+.wrap-page2 > *,
+.wrap-page2 .login > * {
+    position: relative;
+}
+.login {
+    left: 7%;
+    width: 86%;
+    height: 70%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    background-image: url(../images/login-bg.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+.login p {
+    left: 20px;
+    margin-top: 20%;
+    line-height: 2;
+    float: left;
+}
+.login .p-center {
+    left: 0;
+    width: 100%;
+    margin-top: 25%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 2;
+    float: left;
+}
+.login input {
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 40px;
+    margin-top: 6%;
+    padding: 0 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 6px;
+}
+.login .pswd {
+}
+.login button {
+    left: 25%;
+    width: 50%;
+    height: 34px;
+    margin: 16% 0;
+    text-align: center;
+    letter-spacing: 4px;
+    color: #fff;
+    border: 1px solid #cc4445;
+    border-radius: 3px;
+    background: #ec5050;
+    font-size: 1.6rem;
+}*/
+/*--------------------------- Login end ---------------------------*/
+/*--------------------------- Home ---------------------------*/
+
+.home-top {
+    padding: 20px 10px;
+}
+
+.home-top img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+}
+
+.home-top figcaption {
+    margin-top: 1.5%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.home-top p {
+    color: #a3a3a3;
+    font-size: 1.3rem;
+}
+
+h2 {
+    text-indent: 1em;
+}
+
+.task-list {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.task-list li {
+    float: left;
+    width: 50%;
+    height: 44px;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+}
+
+.task-list li:first-child {
+    border-left: none;
+}
+
+.task-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000;
+}
+
+.task-list li a:active {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.task-list li span {
+    float: left;
+    font-size: 1.6rem;
+    line-height: 44px;
+}
+
+.task-list li .img-bg {
+    width: 23px;
+    height: 23px;
+    margin: 10.5px 10px 10.5px 15%;
+    border-radius: 11.5px;
+}
+
+.task-daily {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.task-daily li {
+    height: 60px;
+    border-top: 1px solid #dfdfdf;
+}
+
+.task-daily li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000;
+}
+
+.task-daily li a:active {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.task-daily li img {
+    float: left;
+    width: 44px;
+    height: 36px;
+    margin: 12px 10px 12px 20px;
+}
+
+.task-daily li span {
+    float: left;
+    font-size: 1.6rem;
+    line-height: 60px;
+}
+/*--------------------------- Home end ---------------------------*/
+/*--------------------------- Check-ins ---------------------------*/
+
+.check-in {
+    padding: 10px 20px;
+}
+
+.check-in li {
+    position: relative;
+    height: 60px;
+}
+
+.check-style {
+    width: calc(100% - 100px);
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.check-desc {
+    width: calc(100% - 100px);
+    color: #a3a3a3;
+    font-size: 1.2rem;
+}
+
+.btn-check-in {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    color: #fff;
+    border: 1px solid #cc4445;
+    border-radius: 4px;
+    background: #ec5050;
+    box-shadow: 0 3px 0 #ac2f2f;
+    font-size: 1.6rem;
+}
+
+.btn-check-ok {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    color: #515151;
+    border: 1px solid #bcbcbc;
+    border-radius: 4px;
+    background: #ededed;
+    font-size: 1.6rem;
+}
+
+.pk {
+    padding: 10px 20px;
+}
+
+.pk li {
+    height: 50px;
+    margin: 10px 0;
+}
+
+.pk li img {
+    float: left;
+    width: 46px;
+    height: 46px;
+    margin-right: 10px;
+    padding: 2px;
+    border-radius: 45px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+}
+
+.pk li .name {
+    float: left;
+    width: calc(100% - 60px);
+    color: #a3a3a3;
+}
+/*--------------------------- Check-ins end ---------------------------*/
+/*--------------------------- 每日自评 ---------------------------*/
+
+.kpihero-wrap {
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    background: #fff;
+}
+
+.star-rating {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+}
+
+.star-rating li {
+    width: 100%;
+    padding: 10px 5px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.star-rating li:last-child {
+    border-bottom: none;
+}
+
+.star-rating li span {
+    float: left;
+    width: 30%;
+    font-size: 1.6rem;
+    line-height: 26px;
+}
+
+.star-rating li .desc {
+    margin-top: 15px;
+    color: #a3a3a3;
+}
+
+.stars {
+    float: left;
+    width: 70%;
+}
+
+.stars li {
+    float: left;
+    width: 26px;
+    height: 26px;
+    margin: 0 3%;
+    border: none;
+    background: url(../images/icon-star-1.svg) center center no-repeat;
+    background-size: contain;
+}
+
+.stars li:hover {
+    background: url(../images/icon-star-2.svg) center center no-repeat;
+    background-size: contain;
+}
+
+.selfmark-star {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+}
+.selfmark-star dt {
+    margin: 20px 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.selfmark-star dd {
+    width: 100%;
+    margin-bottom: 16px;
+    overflow: hidden;
+    clear: both;
+    
+    font-size: 1.4rem;
+    white-space: nowrap;
+}
+.checkbox-red {
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    cursor: pointer;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+.checkbox-red:hover {
+    -webkit-transition: all .3s ease;
+       -moz-transition: all .3s ease;
+            transition: all .3s ease;
+    border: 1px solid #f05b72;
+    -webkit-box-shadow: 0 0 3px 1px rgba(240, 91, 114, .5);
+       -moz-box-shadow: 0 0 3px 1px rgba(240, 91, 114, .5);
+            box-shadow: 0 0 3px 1px rgba(240, 91, 114, .5);
+}
+.checkbox-red:checked::after {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    display: block;
+    width: 14px;
+    height: 14px;
+
+    content: "";
+    background: #f05b72;
+}
+.checkbox-selfmark {
+    float: left;
+}
+.selfmark-star .listnum {
+    float: left;
+    margin: 0 10px;
+
+    color: #959ea7;
+}
+
+.text {
+    width: 88%;
+    width: calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
+    min-height: 120px;
+    margin: 10px 20px;
+    padding: 5px;
+    color: #a3a3a3;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.dailyReport-wrap {
+    width: 88%;
+    width: calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
+    min-height: 120px;
+    max-height: 160px;
+    margin: 10px 20px;
+    padding: 5px;
+    color: #a3a3a3;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow-y: auto;
+}
+
+.dailyReport-ol {
+    margin: 0px 0 0 1%;
+    color: #a3a3a3;
+}
+
+.dailyReport-ol li {
+    width: 94%;
+    line-height: 150%;
+    margin: 5px 0 5px 6%;
+    list-style: decimal outside;
+    color: #000;
+    font-size: 1.4rem;
+}
+
+.dailyReport-display {
+    padding: 5px;
+    color: #a3a3a3;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    overflow-y: auto;
+}
+
+.dailyReport-display li {
+    width: 94%;
+    margin-left: 6%;
+    line-height: 1.7;
+    list-style: decimal outside;
+    color: #000;
+}
+
+.btn-ack,
+.btn-ack2,
+.btn-wait {
+    width: 88%;
+    width: calc(100% - 40px);
+    height: 40px;
+    margin: 0 20px;
+    letter-spacing: 0.5em;
+    color: #fff;
+    border: 1px solid #cc4445;
+    border-radius: 3px;
+    background: #ec5050;
+    font-size: 1.8rem;
+}
+
+.btn-ack2 {
+    float: left;
+    width: 42%;
+    width: calc(50% - 30px);
+    letter-spacing: 0;
+}
+
+.btn-wait {
+    color: #515151;
+    border: 1px solid #bcbcbc;
+    background: #ededed;
+}
+
+.btn-change {
+    float: left;
+    width: 42%;
+    width: calc(50% - 30px);
+    height: 40px;
+    margin: 0 0 0 20px;
+    color: #515151;
+    border: 1px solid #bcbcbc;
+    border-radius: 3px;
+    background: #ededed;
+    font-size: 1.8rem;
+}
+/*--------------------------- 每日自评end ---------------------------*/
+/*--------------------------- 主管点评 ---------------------------*/
+
+.more {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: #000;
+    background-image: url(../images/icon-angle-right.svg);
+    background-repeat: no-repeat;
+    background-position: 150% center;
+    background-size: 60% 60%;
+}
+
+.more:hover {
+    color: #000;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.cls-t1 {
+    float: left;
+    width: 24%;
+    padding: 5px 0 5px 20px;
+    letter-spacing: .5em;
+    line-height: 30px;
+}
+
+.inpt-1 {
+    float: left;
+    width: 70%;
+    width: calc(76% - 20px);
+    height: 30px;
+    margin: 5px 0;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.angle-down {
+    background-image: url(../images/icon-angle-down.svg);
+    background-repeat: no-repeat;
+    background-position: 150% center;
+    background-size: 60% 60%;
+}
+
+.wrap-select {
+    position: relative;
+    display: block;
+    color: #000;
+}
+
+.wrap-select:hover,
+.wrap-select:active {
+    color: #000;
+}
+
+.list-name {
+    position: absolute;
+    top: 45px;
+    left: 24%;
+    width: 70%;
+    width: calc(76% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #ccc;
+}
+
+.list-name li {
+    height: 30px;
+    text-indent: 5px;
+    border-bottom: 1px solid #ccc;
+    line-height: 30px;
+}
+
+.list-name li:first-child {
+    position: absolute;
+    top: -10px;
+    left: 87.2%;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: none;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #ccc;
+    border-left: 7px solid transparent;
+}
+/*--------------------------- 主管点评 end ---------------------------*/
+/*--------------------------- message ---------------------------*/
+
+.mesg li {
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 10px 10px 10px 10%;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.mesg li:last-child {
+    border-bottom: none;
+}
+
+.mesg li:active {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.mesg li .title span {
+    font-weight: 500;
+}
+
+.mesg li .title .color-gray {
+    float: right;
+}
+
+.unread {
+    position: absolute;
+    top: 17%;
+    left: 3%;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background: #0f82ff;
+}
+/*--------------------------- message end ---------------------------*/
+/*--------------------------- KPI-detail ---------------------------*/
+
+.mark-manager {
+    padding: 10px;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.mark-manager .number {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    background: #ec5050;
+    font-size: 2.8rem;
+    line-height: 60px;
+}
+
+.mark-manager p {
+    width: calc(100% - 70px);
+}
+
+.mark-manager p span {
+    display: block;
+    width: 100%;
+}
+
+.mark-manager p .time {
+    margin-bottom: 6px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.mark-self {
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.mark-self>li {
+    clear: both;
+    padding: 10px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.mark-self>li:last-child {
+    border: none;
+}
+
+.mark-self>li p {
+    font-weight: bold;
+}
+
+.mark-self>li .score .number {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px 5px 10px 0;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    background: #4bd763;
+    font-size: 2.4rem;
+    line-height: 40px;
+}
+
+.mark-self>li .score .score-detail {
+    width: 84%;
+    width: calc(100% - 45px);
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mark-self li .score .score-detail dt,
+.mark-self li .score .score-detail dd {
+    float: left;
+    margin-bottom: 4px;
+    letter-spacing: -.5px;
+    font-size: 1.2rem;
+}
+
+.mark-self li .score .score-detail dt {
+    height: 18px;
+    margin-right: 5px;
+}
+
+.mark-self li .score .score-detail .m-l {
+    margin-left: 8px;
+}
+
+.mark-self li .score .score-detail dd {
+    width: 15px;
+    height: 18px;
+    background-image: url(../images/icon-star-3.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    fill: #000;
+}
+
+.mark-self li .score .score-detail .light {
+    background-image: url(../images/icon-star-4.svg);
+}
+
+.mark-self li pre {
+    padding: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+}
+/*--------------------------- KPI-detail end ---------------------------*/
+/*--------------------------- KPI-daily ---------------------------*/
+
+.daily {
+    width: calc(100% - 40px);
+    margin: 0 20px 20px 20px;
+}
+
+.daily li {
+    padding: 10px 0;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.daily li p {
+    line-height: 2.4;
+}
+
+.daily-select {
+    float: left;
+    width: 28%;
+    height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-image: url(../images/icon-angle-down.svg);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+    -webkit-appearance: none;
+}
+/*
+.daily-select {
+    float: left;
+    width: 28%;
+}
+.daily-select li {
+    height: 26px;
+    padding: 0 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-image: url(../images/icon-angle-down.svg);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+    font-size: 1.3rem;
+    line-height: 26px;
+}
+.daily-select .active {
+    color: #fff;
+    border: none;
+    background-image: url(../images/icon-angle-down2.svg);
+}*/
+
+.daily-content {
+    float: right;
+    width: 68%;
+    height: 26px;
+    padding: 0 2%;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    background-color: #dedede;
+    font-size: 1.3rem;
+}
+/*--------------------------- KPI-daily end ---------------------------*/
+
+.score2 {
+    display: block;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #c0392b;
+    font-size: 6rem;
+    line-height: 100px;
+}
+/*--------------------------- TeamReport ---------------------------*/
+
+.teamreport {
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 100;
+}
+
+.teamreport-header {
+    background: #EFEFF4;
+    height: 100px;
+}
+
+.padding20 {
+    padding: 0 20px;
+}
+
+.teamreport-title {
+    margin: 20px;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+.teamreport-title2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.teamreport-p {
+    margin: 20px;
+    margin-top: 0;
+    color: #949494;
+    font-size: 1.4rem;
+}
+
+.summary {
+    margin: 10px 20px 20px 20px;
+}
+
+.summary textarea {
+    width: 100%;
+    width: calc(100% -2px);
+    height: 100%;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    line-height: 1.7;
+    color: #a0a0a0;
+}
+
+.teamreport-ul {
+    margin: 10px 20px 20px 20px;
+}
+
+.teamreport-ul li {
+    min-height: 36px;
+    font-size: 1.4rem;
+    line-height: 32px;
+    *zoom: 1;
+    clear: both;
+}
+
+.list-decimal li {
+    margin: 10px 0 10px 20px;
+    list-style: decimal;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.teamreport-ul li input[type='checkbox'] {
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin: 7px 10px 7px 0;
+    border: 1px solid #949494;
+    -webkit-appearance: none;
+}
+
+.teamreport-ul li input[type='checkbox'] {
+    position: relative;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: #fff;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.teamreport-ul li input[type='checkbox']:checked::after {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    content: url(../images/icon-check.svg);
+}
+
+.teamreport-ul li input[type='checkbox']:focus {
+    outline: none;
+}
+
+.teamreport-ul li input[type='text'],
+.teamreport-ul li textarea {
+    width: 80%;
+    width: calc(100% - 30px);
+    min-height: 32px;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    padding: 0 10px;
+    line-height: 1.7;
+    word- wrap: break-word;
+    float: right;
+}
+
+.teamreport-ul li span {
+    width: 100%;
+    padding: 0 5px;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    line-height: 1.7;
+    display: block;
+}
+
+.teamreport-ul li label {
+    width: 90%;
+    width: calc(100% - 28px);
+    float: right;
+}
+
+.teamreport-ol {
+    margin: 10px 20px 20px 20px;
+}
+
+.teamreport-ol li {
+    margin: 10px 0 10px 20px;
+    min-height: 36px;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    list-style: decimal;
+}
+/*--------------------------- TeamReport end ---------------------------*/

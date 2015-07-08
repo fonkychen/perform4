@@ -1,0 +1,747 @@
+@charset 'utf-8';
+/* CSS Document */
+/*--------------------------- left ---------------------------*/
+
+.Left .subnav .liB1 a {
+    background-image: url(../images/subnav/btnB1_1.png);
+}
+.Left .subnav .liB1 a:hover {
+    background-image: url(../images/subnav/btnB1_2.png);
+}
+.Left .subnav .liB2 a {
+    background-image: url(../images/subnav/btnB2_1.png);
+}
+.Left .subnav .liB2 a:hover {
+    background-image: url(../images/subnav/btnB2_2.png);
+}
+.Left .subnav .liB3 a {
+    background-image: url(../images/subnav/btnB3_1.png);
+}
+.Left .subnav .liB3 a:hover {
+    background-image: url(../images/subnav/btnB3_2.png);
+}
+.Left .subnav .liB4 a {
+    background-image: url(../images/subnav/btnB4_1.png);
+}
+.Left .subnav .liB4 a:hover {
+    background-image: url(../images/subnav/btnB4_2.png);
+}
+.Left .subnav .liB5 a {
+    background-image: url(../images/subnav/btnB5_1.png);
+}
+.Left .subnav .liB5 a:hover {
+    background-image: url(../images/subnav/btnB5_2.png);
+}
+/*--------------------------- 国家财富 ---------------------------*/
+
+.Wealth_Country {
+    width: 94%;
+    height: auto;
+    margin: 20px 3% 0 3%;
+    border-collapse: collapse;
+    border: 1px solid #dedede;
+}
+.Wealth_Country td, .Wealth_Country th {
+    height: 32px;
+    text-align: center;
+    color: #000;
+    border: 1px solid #dedede;
+}
+.Wealth_Country th {
+    color: #fff;
+}
+.Wealth_Country .detail {
+    text-align: left;
+    text-indent: 20px;
+    color: #000;
+    background: #eee;
+    font-weight: normal;
+}
+.Wealth_Country th a {
+    display: block;
+    float: right;
+    height: 16px;
+    margin-right: 20px;
+}
+.Wealth_Country td {
+    padding: 0 5px;
+}
+.Wealth_Country .expend {
+    text-align: left;
+    line-height: 170%;
+}
+.Color_country01 {
+    background: #19a7dc;
+}
+.Color_country02 {
+    background: #23ae89;
+}
+.Color_country03 {
+    background: #ffb61c;
+}
+.Color_country04 {
+    background: #674e9e;
+}
+.Color_country05 {
+    background: #e94b3b;
+}
+.Color_country06 {
+    background: #2ec1cc;
+}
+.Color_country07 {
+    background: #d6d6d6;
+}
+.Wealth_Input {
+    width: 70%;
+    margin: 20px 15%;
+}
+.Wealth_Input td {
+    position: relative;
+    padding: 10px 0;
+    color: #5c3939;
+    font-size: 15px;
+    font-weight: bold;
+}
+.Wealth_Input input, .Wealth_Input textarea {
+    width: 95%;
+    height: 30px;
+    padding: 0 10px;
+    color: #5f4618;
+    border: 1px solid #e3ccba;
+    line-height: 30px;
+}
+.Wealth_Input textarea {
+    width: 97%;
+    height: 120px;
+    padding: 5px;
+    line-height: 170%;
+}
+.Wealth_Input .time {
+    cursor: pointer;
+    background: url(../images/icon_calendar.png) 98% center no-repeat;
+}
+.Wealth_Input .choose {
+    cursor: pointer;
+    background: url(../images/arrow_8x6.png) 98% center no-repeat;
+}
+.Wealth_Input ul {
+    position: absolute;
+    z-index: 100;
+    display: none;
+    width: 99.4%;
+    border: 1px solid #e3ccba;
+    border-top: none;
+    background: #fff;
+}
+.Wealth_Input ul li {
+    height: 32px;
+    text-indent: 12px;
+    font-size: 12px;
+    line-height: 32px;
+}
+.Wealth_Input ul li a {
+    color: #5f4618;
+    font-weight: normal;
+}
+.Wealth_Input ul li a:hover {
+    font-weight: bold;
+}
+.record-a {
+    display: block;
+    width: 92%;
+    margin: 10px 4%;
+    text-align: right;
+    color: #c0392b;
+    font-size: 14px;
+    font-weight: bold;
+}
+.record-a:hover {
+    text-decoration: underline;
+}
+/*--------------------------- 个人财富 ---------------------------*/
+
+.summary {
+    width: 96%;
+    height: 118px;
+    margin: 20px 2%;
+}
+.summary li {
+    float: left;
+    width: 210px;
+    height: 81px;
+    margin: 0 13px;
+    padding: 15px 0 20px 0;
+    text-align: center;
+    border: 1px solid #e3ccba;
+    background: #fefaf6 url(../images/bg_corner2.png) center center no-repeat;
+}
+.summary li span {
+    display: block;
+    width: 100%;
+    margin: 15px 0 0 0;
+    color: #c0392b;
+    font-size: 36px;
+}
+.help_left {
+    float: left;
+    width: 47%;
+    *+width: 46%;
+    margin: 10px 2.5% 20px 7.5%;
+}
+.help_right {
+    float: left;
+    width: 33%;
+    margin: 10px 7.5% 20px 2.5%;
+}
+.MyDrum th:hover a {
+    display: block;
+}
+.MyDrum th a {
+    position: absolute;
+    right: 0;
+    display: none;
+    width: 8px;
+    height: 6px;
+    padding: 3px 5px;
+}
+.MyDrum th .up {
+    top: 4px;
+    background: url(../images/arrow_8x6_4.png) center center no-repeat;
+}
+.MyDrum th .down {
+    bottom: 2px;
+    background: url(../images/arrow_8x6_3.png) center center no-repeat;
+}
+.MyDrum th .up:hover {
+    top: 4px;
+    background: url(../images/arrow_8x6_2.png) center center no-repeat;
+}
+.MyDrum th .down:hover {
+    bottom: 2px;
+    background: url(../images/arrow_8x6.png) center center no-repeat;
+}
+.MyDrum th .up_this {
+    top: 4px;
+    background: url(../images/arrow_8x6_2.png) center center no-repeat;
+}
+.MyDrum th .down_this {
+    bottom: 2px;
+    background: url(../images/arrow_8x6.png) center center no-repeat;
+}
+/*--------------------------- 悬赏榜 ---------------------------*/
+
+.PriceDetail_P {
+    margin: 20px 5% 0 5%;
+    line-height: 170%;
+}
+.question {
+    float: left;
+    width: 70%;
+    height: 20px;
+    text-indent: 30px;
+    color: #c0392b;
+    background: url(../images/icon_qa.png) 0 0 no-repeat;
+    font-weight: bold;
+    line-height: 20px;
+}
+.answer {
+    height: 20px;
+    background: url(../images/line_dash.png) 0 center repeat-x;
+}
+.answer span {
+    display: block;
+    width: 100px;
+    height: 20px;
+    text-indent: 30px;
+    color: #8e500f;
+    background: #fff url(../images/icon_qa.png) 0 -20px no-repeat;
+    font-weight: bold;
+}
+.endtime {
+    float: right;
+    width: 30%;
+    height: 20px;
+    text-align: right;
+    color: #8e500f;
+    line-height: 20px;
+}
+.lineBetw {
+    margin: 0 20px;
+}
+.reply {
+    margin: 20px 5% 0 5%;
+}
+.reply span {
+    float: left;
+    width: 10%;
+    margin: 10px 0 0 0;
+    color: #8e500f;
+}
+.reply textarea {
+    float: left;
+    width: 88%;
+    height: 100px;
+    padding: 5px;
+    color: #b29551;
+    border: 1px solid #e3ccba;
+}
+.reply textarea:focus {
+    outline: none;
+}
+.reply button {
+    float: right;
+    margin: 20px 0 0 0;
+}
+.answers {
+    margin: 10px 5% 20px 5%;
+    color: #b29551;
+}
+.answers li {
+    clear: both;
+    padding: 10px 0;
+    border-top: 1px dotted #d4cfc9;
+}
+.answers li:first-child {
+    border: none;
+}
+.answers li:before, .answers li:after {
+    display: table;
+    content: '';
+}
+.answers li:after {
+    clear: both;
+}
+.answers li {
+    *zoom: 1;
+    /*ie6,7*/
+}
+.answers li p {
+    margin-top: 10px;
+    line-height: 170%;
+}
+.answers li button {
+    float: right;
+    margin-top: 20px;
+}
+.answers li .fontColor_gray {
+    float: right;
+}
+/*--------------------------- 任务中心 ---------------------------*/
+
+.task_nav {
+    height: 35px;
+    margin: 0 4%;
+    padding: 0 40px;
+    border-bottom: 1px solid #e3ccba;
+}
+.task_nav li {
+    float: left;
+    width: 150px;
+    height: 34px;
+    border: 1px solid #e3ccba;
+    border-left: none;
+}
+.task_nav li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #b29551;
+    line-height: 34px;
+}
+.task_nav li a:hover, .task_nav .thisPage a {
+    color: #c0392b;
+}
+.task_nav .thisPage {
+    border-bottom: 1px solid #fff;
+    background: url(../images/bg_drum_cornerL.png) 1px 1px no-repeat;
+}
+.task_nav .thisPage a {
+    background: url(../images/bg_drum_cornerR.png) 99% 1px no-repeat;
+}
+.task_nav li:first-child {
+    border-left: 1px solid #e3ccba;
+}
+.task_list {
+    margin: 0 4% 0 6%;
+    padding: 20px 0 0 0;
+}
+.task_list li:before, .task_list li:after {
+    display: table;
+    content: '';
+}
+.task_list li:after {
+    clear: both;
+}
+.task_list li {
+    padding: 20px 0;
+    border-bottom: 1px dotted #d4cfc9;
+    *zoom: 1;
+    /*ie6,7*/
+}
+.task_list li:first-child {
+    border-top: 1px dotted #d4cfc9;
+}
+.task_list_Numb {
+    display: block;
+    float: left;
+    width: 8%;
+    height: 100%;
+    text-indent: 15px;
+    color: #9f9f9f;
+    font-family: georgia;
+    font-size: 150%;
+    font-style: italic;
+}
+.task_list_content {
+    position: relative;
+    float: left;
+    width: 92%;
+    height: 100%;
+    color: #b29551;
+    line-height: 200%;
+}
+.task_list_content .Task_tag {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 60px;
+    height: 53px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.task_list_content .receive {
+    background: url(../images/tag_red.png) 0 0 no-repeat;
+}
+.task_list_content .review {
+    color: #887416;
+    background: url(../images/tag_yellow.png) 0 0 no-repeat;
+}
+.task_list_content .over {
+    background: url(../images/tag_gray.png) 0 0 no-repeat;
+}
+.task_list_content p {
+    width: 77%;
+    margin: 0 0 0 3%;
+}
+.task_list_content .fontColor_gray {
+    margin-bottom: 10px;
+}
+.task_list_content .overAdd {
+    position: absolute;
+    right: 11px;
+}
+.task_list_content .task_list_reply {
+    position: relative;
+    padding: 15px 18px 10px 18px;
+    border: 1px solid #ebebeb;
+}
+.task_list_content .task_list_reply textarea {
+    width: 99%;
+    height: 24px;
+    margin: 0 0 5px 0;
+    margin: 0 0 10px 0\9;
+    transition: all .3s ease-out;
+    color: #459faa;
+    border: 1px solid #c7c7c7;
+    line-height: 24px;
+}
+/*-
+.task_list_content .task_list_reply textarea:focus {
+	height: 100px;
+	outline: none;
+}-*/
+
+.task_list_content .task_list_reply .arrow_top {
+    position: absolute;
+    top: -20px;
+    left: 93.8%;
+    width: 0;
+    height: 0;
+    border: 10px solid #ebebeb;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+.task_list_content .task_list_reply .arrow_top:after {
+    position: absolute;
+    right: -8px;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    content: '\00a0';
+    border: 8px solid #fff;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+.task_list_content .task_list_reply button {
+    display: inline-block;
+    float: right;
+    width: 56px;
+    height: 22px;
+    margin: 0 0 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    border-radius: 1px;
+    background: url(../images/btn_08.png) 0 0 no-repeat;
+    background-image: -moz-linear-gradient(top, #49b100, #3e9a00);
+    background-image: -webkit-linear-gradient(top, #49b100, #3e9a00);
+    background-image: linear-gradient(to bottom, #49b100, #3e9a00);
+    font-weight: bold;
+    line-height: 22px;
+}
+.task_list_content .task_list_reply button:hover {
+    background: url(../images/btn_08.png) 0 -24px no-repeat;
+    background-image: -moz-linear-gradient(top, #3e9a00, #49b100);
+    background-image: -webkit-linear-gradient(top, #3e9a00, #49b100);
+    background-image: linear-gradient(to bottom, #3e9a00, #49b100);
+}
+.task_list_content .task_list_reply button:focus {
+    outline: none;
+}
+.task_list_content .task_list_reply a {
+    float: right;
+    color: #999;
+}
+.task_list_content .task_list_reply a:hover {
+    text-decoration: underline;
+}
+/*--------------------------- 财富商城 ---------------------------*/
+
+.wrap_cards {
+    height: 182px;
+    margin: 40px 3%;
+}
+.cards {
+    float: left;
+    width: 544px;
+    height: 182px;
+}
+.cards li {
+    float: left;
+    overflow: hidden;
+    width: 130px;
+    height: 85px;
+    margin: 0 6px 6px 0;
+    background: url(../images/cards.png) 0 0 no-repeat;
+}
+.cards li a {
+    display: block;
+    width: 130px;
+    height: 24px;
+    padding-top: 61px;
+    text-align: center;
+    color: #f7e1d4;
+    line-height: 24px;
+}
+.cards li:hover, .cards .thisCard {
+    box-shadow: 0 0 5px 1px #e53c40;
+}
+.cards .thisCard {
+    background: url(../images/cards_2.png) 0 0 no-repeat;
+}
+.cards .thisCard a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.have_a_try {
+    float: right;
+    width: 140px;
+    height: 146px;
+    padding: 30px 0 0 0;
+    background: url(../images/cards_try.png) center 0 no-repeat;
+}
+.have_a_try img {
+    width: 130px;
+    height: 90px;
+    margin: 6px 5px;
+}
+.have_a_try a {
+    display: block;
+    width: 140px;
+    height: 42px;
+    background: url(../images/cards_start_1.png) 0 0 no-repeat;
+}
+.have_a_try a:hover {
+    background: url(../images/cards_start_2.png) 0 0 no-repeat;
+}
+.have_a_try a:active {
+    background: url(../images/cards_start_1.png) 0 0 no-repeat;
+}
+.Prize {
+    width: 100%;
+}
+.Prize li {
+    position: relative;
+    float: left;
+    width: 119px;
+    height: 200px;
+    margin: 0 33.5px 40px 33.5px;
+}
+.Prize li .PrizeImg {
+    display: table-cell;
+    width: 113px;
+    height: 113px;
+    text-align: center;
+    vertical-align: middle;
+    border: 3px solid #fef0ae;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .5);
+}
+.Prize li .PrizeImg img {
+    max-width: 113px;
+    max-height: 113px;
+    vertical-align: middle;
+    border-radius: 7px;
+}
+.Prize li .PrizeImg a {
+    cursor: default;
+}
+.Prize li:hover .count {
+    visibility: visible;
+    transition: all .25s ease-in-out;
+}
+.Prize li .count {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    width: 119px;
+    height: 119px;
+    text-align: center;
+    opacity: .75;
+    border-radius: 10px;
+    background: #000;
+    background: rgba(0, 0, 0, .75);
+    filter: alpha(opacity=75);
+}
+.Prize li .count-name {
+    position: absolute;
+    top: 30px;
+    left: -80%;
+    visibility: hidden;
+    width: 80%;
+    height: 30px;
+    color: #fff;
+    color: rgba(255, 255, 255, .0);
+    text-shadow: 0 1px 1px #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.Prize li .count-p {
+    position: absolute;
+    top: 60px;
+    left: 110%;
+    visibility: hidden;
+    width: 80%;
+    height: 30px;
+    color: #fff;
+    color: rgba(255, 255, 255, .0);
+    border-top: 1px solid #fff;
+    text-shadow: 0 1px 1px #fff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.Prize li:hover .count-name, .Prize li:hover .count-p {
+    left: 10%;
+    visibility: visible;
+    transition: all .35s ease-in-out;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+.Prize li p {
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+    margin: 3px 0 8px 0;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #2a2929;
+    line-height: 170%;
+}
+.Prize li p a {
+    cursor: default;
+    color: #2a2929;
+}
+.Prize li .del_p a {
+    color: #ccc;
+}
+.Prize li .del_img {
+    border: 3px solid #ccc;
+    border-radius: 10px;
+}
+.Prize li .btn_04 {
+    margin: 0 24.5px;
+}
+.Prize li .btn_06 {
+    margin: 0 24.5px;
+}
+.NewPrize {
+    width: 88%;
+    margin: 20px 6%;
+}
+.NewPrize td:first {
+    max-width: 90%;
+    text-align: center;
+}
+.NewPrize td {
+    height: 50px;
+    padding: 8px 0;
+    color: #b29551;
+    font-size: 14px;
+}
+.NewPrize p {
+    line-height: 200%;
+}
+.NewPrize input[type='text'], .NewPrize input[type='number'] {
+    width: 91%;
+    height: 30px;
+    padding: 0 10px;
+    color: #c0392b;
+    border: 1px solid #e3ccba;
+    font-size: 16px;
+}
+.NewPrize input[type='radio'] {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-top: 7px;
+    padding: 0 10px;
+}
+.NewPrize span {
+    float: left;
+    margin: 7px 10px;
+}
+.NewPrize select {
+    float: left;
+    min-width: 140px;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid #e3ccba;
+    outline: none;
+}
+.NewPrize .upload {
+    display: table-cell;
+    width: 113px;
+    height: 113px;
+    text-align: center;
+    vertical-align: middle;
+    color: #c0392b;
+    border: 3px solid #fef0ae;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .5);
+}
+.NewPrize .upload img {
+    max-width: 113px;
+    max-height: 113px;
+    vertical-align: middle;
+    border-radius: 7px;
+}

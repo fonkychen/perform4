@@ -1,0 +1,849 @@
+@charset "UTF-8";
+/*
+ *
+ * @authors Judy
+ * @date    2015-04-23 10:17:59
+ *
+ */
+/*---------------------------------- 每日自评 ----------------------------------*/
+.selfmark-star {
+    width: 328px;
+    margin-bottom: 38px;
+    margin-left: 27px;
+
+    font-size: 14px;
+    line-height: 34px;
+}
+.selfmark-star dt {
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #bdc3c7;
+}
+.selfmark-star .lastdd {
+    color: #e6b771;
+}
+.selfmark-star dd {
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+
+    white-space: nowrap;
+}
+.selfmark-star dd .starName {
+    float: left;
+    margin-right: 22px;
+}
+.selfmark-star dd .starUl {
+    float: left;
+    height: 34px;
+}
+.selfmark-star dd .starUl li {
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin: 8px 10px 8px 0;
+}
+.selfmark-star dd .starUl li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background: url(../images/icon-star.png) center no-repeat;
+}
+.selfmark-star dd .starUl li a:hover {
+    background: url(../images/icon-star2.png) center no-repeat;
+}
+.selfmark-star dd .starUl .checked a {
+    background: url(../images/icon-star2.png) center no-repeat;
+}
+
+.checkbox-selfmark {
+    float: left;
+    margin: 7px 0;
+}
+.selfmark-star .listnum {
+    float: left;
+    margin: 0 20px;
+
+    color: #959ea7;
+}
+.selfmarkReport-wrap {
+    width: 670px;
+    height: 132px;
+    padding: 0 5px;
+    margin-left: 27px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    border: 1px solid #e6e6e6;
+}
+.selfmarkReport-wrap ol {
+    padding-left: 20px;
+    margin: 0;
+}
+.selfmarkReport-wrap li {
+    margin: 5px 0;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    line-height: 150%;
+    list-style: decimal outside;
+    resize: none;
+}
+.wordscount {
+    margin-bottom: 20px;
+    margin-left: 26px;
+
+    line-height: 2;
+    color: #959ea7;
+}
+.lastweek {
+    width: 166px;
+    padding-right: 34px;
+}
+.lastweek-score {
+    width: 82px;
+    height: 82px;
+    margin: 4px 41px 30px 41px;
+
+    font-size: 36px;
+    line-height: 82px;
+    text-align: center;
+    color: #50c8d7;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    background: #fff;
+}
+.lastweek-time {
+    font-size: 14px;
+    line-height: 2.14;
+    color: #959ea7;
+}
+.lastweek-detail {
+    font-size: 14px;
+    line-height: 2.14;
+}
+.lastweek .btn-gray {
+    margin: 48px 36px;
+}
+
+/*---------------------------------- 公事榜 ----------------------------------*/
+.dailyboard-colors {
+	float: left;
+	width: 305px;
+	margin-left: 22px;
+
+	border: 1px solid #e6e6e6;
+}
+.dailyboard-colors td {
+	width: 272px;
+
+	vertical-align: top;
+}
+.dailyboard-colors td:first-child {
+	width: 14px;
+	padding: 0 9px;
+
+	border-right: 1px solid #e6e6e6;
+	text-align: center;
+	line-height: 3;
+	vertical-align: middle;
+}
+.dailyboard-colors td ul {
+	height: 100%;
+}
+.dailyboard-colors td ul li {
+	width: 135px;
+	height: 14px;
+	padding: 12px 0;
+	float: left;
+}
+.dailyboard-colors td ul li span {
+	float: left;
+	width: 12px;
+	height: 12px;
+	margin: 1px 16px 1px 18px;
+
+	border-radius: 2px;
+}
+
+.pagingdate {
+    height: 30px;
+    padding: 52px 0 30px 0;
+}
+.pagingdate > * {
+    float: left;
+}
+.pagingdate span {
+    margin: 0 24px;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.pagingdate span a:hover {
+    text-decoration: underline;
+    color: #456;
+}
+.pagingdate .arrow {
+    position: relative;
+
+    display: inline-block;
+    width: 22px;
+    height: 30px;
+    margin-left: 9px;
+
+    background-color: #e8e8e8;
+    background-image: url(../images/pagingdate-arrow-l2.png);
+    background-repeat: no-repeat;
+    background-position: 26% center;
+}
+.pagingdate .arrow {
+    *zoom: expression(
+          this.runtimeStyle.zoom="1",
+          this.appendChild( document.createElement("small") ).className="before"
+         );
+}
+.pagingdate .arrow:before,
+.pagingdate .arrow .before {
+    position: absolute;
+    left: -9px;
+
+    width: 0;
+    height: 0;
+
+    content: "";
+    border-top: 15px solid transparent;
+    border-right: 9px solid #e8e8e8;
+    border-bottom: 15px solid transparent;
+}
+.pagingdate .right {
+    background-image: url(../images/pagingdate-arrow-r.png);
+    background-position: 70% center;
+}
+.pagingdate .right:before,
+.pagingdate .right .before {
+    left: 22px;
+
+    border-right: none;
+    border-left: 9px solid #e8e8e8;
+}
+.pagingdate .blue {
+    background-color: #50c8d7;
+    background-image: url(../images/pagingdate-arrow-l.png);
+}
+.pagingdate .blue:before,
+.pagingdate .blue .before {
+    border-right-color: #50c8d7;
+    border-left-color: #50c8d7;
+}
+.pagingdate .rightblue {
+    background-image: url(../images/pagingdate-arrow-r2.png);
+}
+
+.pagingdate .date {
+    height: 28px;
+    padding: 0 20px;
+    margin: 0 13px;
+
+    font-size: 14px;
+    line-height: 28px;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+}
+.pagingdate button {
+    margin-left: 74px;
+}
+
+.dailyboard {
+    width: 980px;
+    margin: 0 10px;
+}
+.dailyboard th,
+.dailyboard td {
+    height: 35px;
+
+    text-align: center;
+    border: 1px solid #e6e6e6;
+}
+.dailyboard th {
+    font-size: 13px;
+}
+.dailyboard .line td {
+    height: 1px;
+
+    border-right: none;
+    border-left: none;
+}
+.dailyboard tr td:first-child {
+    padding: 0 15px;
+
+    line-height: 2;
+}
+.dailyboard input {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+
+    width: 94%;
+    height: 35px;
+    padding: 0 3%;
+
+    line-height: 35px;
+    border: 1px solid #e6e6e6;
+}
+.dailyboard input:focus {
+    border: 1px solid #50c8d7;
+}
+/* Chrome, Safari 3+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .dailyboard input {
+        width: 94.2%;
+    }
+}
+.dailyboard .typechoose {
+    position: absolute;
+    top: 50px;
+    left: 1px;
+    z-index: 10;
+
+    display: none;
+    width: 330px;
+    padding: 5px 10px;
+
+    border: 1px solid #50c8d7;
+    background: #fff;
+}
+.dailyboard .typechoose dt {
+    float: left;
+    width: 42px;
+    min-height: 30px;
+
+    line-height: 30px;
+    text-align: left;
+    color: #50c8d7;
+}
+.dailyboard .typechoose dt:first-child {
+    width: 100%;
+}
+.dailyboard .typechoose dt:first-child > a {
+    position: relative;
+    top: -26px;
+    *+top: -32px;
+    left: -82px;
+
+    display: inline-block;
+    width: 0;
+    height: 0;
+
+    border: 10px solid #50c8d7;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+.dailyboard .typechoose dt:first-child > a:after {
+    position: absolute;
+    top: -9px;
+    right: -10px;
+
+    width: 0;
+    height: 0;
+
+    content: "\00a0";
+    border: 10px solid #fff;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+.dailyboard .typechoose dd {
+    float: left;
+    width: 288px;
+    overflow: hidden;
+}
+.dailyboard .typechoose dd a {
+    float: left;
+    width: 62px;
+    height: 22px;
+    margin: 4px 5px;
+
+    line-height: 22px;
+}
+.dailyboard .typechoose .choosed {
+    color: #fff;
+    background: #50c8d7;
+}
+/*---------------------------------- 公事榜加班审批 ----------------------------------*/
+.apply {
+	width: 948px;
+	margin: 0 26px;
+}
+.apply tr {
+	border: 1px solid #e6e6e6;
+}
+.apply th,
+.apply td {
+	height: 35px;
+
+	text-align: center;
+	font-size: 14px;
+}
+.apply th,
+.apply td:first-child,
+.apply td span {
+	color: #bdc3c7;
+}
+.apply td a {
+	margin: 0 17px;
+
+	font-weight: bold;
+	color: #50c8d7;
+	text-decoration: underline;
+}
+.apply td a:hover {
+	color: #f05b72;
+}
+
+/*---------------------------------- 主管点评 ----------------------------------*/
+.managermark-choose {
+	width: 900px;
+	margin: 0 50px;
+}
+.managermark-choose dt,
+.managermark-choose dd {
+	float: left;
+
+	font-size: 14px;
+}
+.managermark-choose dt {
+	width: 70px;
+	height: 100%;
+
+	color: #bdc3c7;
+	line-height: 48px;
+}
+.managermark-choose dd {
+	width: 830px;
+}
+.managermark-choose dd li {
+	float: left;
+	margin: 9px 4px;
+}
+.managermark-choose dd li a {
+	display: block;
+	min-width: 42px;
+	padding: 6px 18px;
+
+	text-align: center;
+}
+.managermark-choose dd li a:hover,
+.managermark-choose dd .choosed a {
+	padding: 5px 17px;
+
+	border: 1px solid #50c8d7;
+	color: #50c8d7;
+}
+.managermark-input {
+	float: left;
+	width: 82px;
+	height: 82px;
+	margin: 0 10px 0 20px;
+
+	border: 1px solid #e6e6e6;
+	text-align: center;
+	line-height: 82px;
+	color: #50c8d7;
+	font-size: 36px;
+}
+.managermark-text {
+	float: left;
+	width: 845px;
+	height: 72px;
+	padding: 5px 10px;
+
+	border: 1px solid #e6e6e6;
+	line-height: 1.7;
+	color: #bdc3c7;
+}
+.kpidetail {
+	width: 960px;
+	margin: 0 20px;
+}
+.kpidetail th,
+.kpidetail td {
+	height: 35px;
+
+	border: 1px solid #e6e6e6;
+	font-size: 14px;
+	line-height: 1.7;
+	text-align: center;
+}
+.kpidetail td {
+	padding: 5px 10px;
+
+	vertical-align: top;
+}
+.kpidetail td b {
+	font-size: 18px;
+	color: #50c8d7;
+	font-weight: normal;
+}
+.kpidetail td span {
+	margin-right: 8px;
+	*+margin-left: 10px;
+
+	color: #959ea7;
+}
+.kpidetail td p {
+	width: 100%;
+
+	text-align: left;
+}
+.kpidetail td ol,
+.kpidetail td ul {
+	margin: 10px 0;
+}
+.kpidetail td li {
+	margin-left: 20px;
+
+	color: #959ea7;
+	text-align: left;
+	list-style: decimal;
+}
+.kpidetail td:last-child {
+	vertical-align: middle;
+	text-align: left;
+}
+.kpidetail td {
+	*+text-align: expression(this.nextSibling==null?'left':'center');
+}
+.kpidetail td:last-child p {
+	text-align: center;
+}
+
+/*---------------------------------- 指标进度 ----------------------------------*/
+.margin-r3p {
+    margin-right: 3%;
+}
+.dashline-title {
+    width: 94%;
+    height: 20px;
+    margin: 25px 3%;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+
+    background: url(../images/line_dash.png) 0 center repeat-x;
+}
+.dashline-title span {
+    width: auto;
+    padding: 0 10px 0 0;
+
+    background: #fff;
+}
+.dashline-title .btn {
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    padding: 0 0 0 5px;
+
+    background: #fff;
+}
+.dashline-title button {
+	margin-top: -30px;
+	*+margin-top: -50px;
+}
+.kpiProgress-table1 {
+    width: 94%;
+    height: auto;
+    margin: 0 3% 40px 3%;
+
+    border-collapse: collapse;
+
+    border: 1px solid #e6e6e6;
+}
+.kpiProgress-table1 th,
+.kpiProgress-table1 td {
+    height: 32px;
+    padding: 0 10px;
+
+    font-size: 14px;
+    line-height: 2;
+    border-collapse: collapse;
+
+    text-align: center;
+
+    border-top: 1px solid #e6e6e6;
+}
+.kpiProgress-table1 input {
+    width: 84%;
+    height: 80%;
+    height: 24px\9;
+    line-height: 24px\9;
+    *+height: 26px;
+    *+line-height: 26px;
+    margin-left: -20px;
+    *+margin-left: 10px;
+    padding: 0 20px;
+
+	text-align: left;
+
+    color: #bdc3c7;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+}
+:root .kpiProgress-table1 input {
+    height: 80%;
+}
+.kpiProgress-table1 input:focus {
+    border: 1px solid #e6e6e6;
+    outline: none;
+}
+.kpiProgress-table1 td + td,
+.kpiProgress-table1 th + th {
+    text-align: left;
+    text-indent: 30px;
+}
+.kpiProgress-table1 td + td + td,
+.kpiProgress-table1 th + th + th {
+    text-align: center;
+    text-indent: 0;
+}
+.kpiProgress-table1 td + td + td input {
+	width: 44%;
+	margin-left: 0;
+	padding: 0;
+
+	text-align: center;
+}
+.kpiProgress-table1 a {
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #50c8d7;
+}
+.kpiProgress-table1 a:hover {
+    text-decoration: underline;
+}
+.kpiProgress-table1 .a-ok {
+    color: #f05b72;
+}
+.kpiProgress-table2 {
+    width: 94%;
+    height: auto;
+    margin: 0 3% 40px 3%;
+
+    border-collapse: collapse;
+
+    border: 1px solid #e6e6e6;
+}
+.kpiProgress-table2 th,
+.kpiProgress-table2 td {
+    height: 32px;
+
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 200%;
+    border-collapse: collapse;
+
+    text-align: center;
+
+    color: #959ea7;
+}
+.kpiProgress-table2 td + td {
+    color: #f05b72;
+}
+.kpiProgress-table2 th {
+    height: 32px;
+
+    color: #456;
+    border-bottom: 1px solid #e6e6e6;
+}
+.kpiProgress-table3 {
+    width: 94%;
+    height: auto;
+    margin: 0 3% 40px 3%;
+
+    border-collapse: collapse;
+
+    border: 1px solid #e6e6e6;
+}
+.kpiProgress-table3 th,
+.kpiProgress-table3 td {
+    height: 32px;
+
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 200%;
+    border-collapse: collapse;
+
+    text-align: left;
+    text-indent: 38px;
+
+    color: #959ea7;
+}
+.kpiProgress-table3 th {
+    height: 32px;
+
+    color: #456;
+    border-bottom: 1px solid #e6e6e6;
+}
+.lv-up {
+    height: 12px;
+
+    line-height: 1;
+}
+.lv-up em {
+    float: left;
+
+    font-family: Simsun;
+
+    color: #bdc3c7;
+}
+.lv-up span {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 6px;
+    margin: 3px 0;
+
+    border-radius: 6px;
+    background: #f4f4f4;
+}
+.lv-up strong {
+    display: block;
+    height: 6px;
+
+    border-radius: 6px;
+    background: #68cfdb;
+}
+
+/*---------------------------------- 有缘点评 ----------------------------------*/
+.othermark-wrap {
+    width: 150px;
+    padding: 0 68px;
+}
+.othermark-bg {
+    width: 150px;
+    width: 96px;
+    height: 180px;
+    height: 96px;
+    padding: 62px 27px 22px 27px;
+
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 96px;
+
+    text-align: center;
+
+    color: #c0392b;
+    background: url(../images/othermark-bg.png) 0 0 no-repeat;
+}
+.othermark-bg img {
+    width: 100%;
+    height: 100%;
+}
+.othermark-name {
+    width: 100%;
+
+    font-size: 14px;
+    line-height: 50px;
+
+    text-align: center;
+    letter-spacing: 1px;
+
+    color: #50c8d7;
+}
+.btn-othermark {
+    width: 106px;
+    height: 38px;
+    margin: 0 22px;
+
+    background: url(../images/othermark-btn.png) 0 0 no-repeat;
+}
+.btn-othermark:hover {
+    background: url(../images/othermark-btn2.png) 0 0 no-repeat;
+}
+.btn-othermark:active {
+    background: url(../images/othermark-btn.png) 0 0 no-repeat;
+}
+.othermark-em {
+    display: block;
+    width: 100%;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    text-align: center;
+
+    color: #959ea7;
+}
+.othermark-text {
+    width: 640px;
+    height: 72px;
+    padding: 5px 10px;
+    margin-left: 27px;
+
+    line-height: 1.7;
+
+    color: #bdc3c7;
+    border: 1px solid #e6e6e6;
+}
+.othermark-star {
+    width: 600px;
+}
+.othermark-star dd .span-last {
+    color: #bdc3c7;
+}
+.othermark-p,
+.othermark-p2 {
+    width: 600px;
+    margin-bottom: 35px;
+    margin-left: 27px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    text-align: left;
+
+    color: #50c8d7;
+}
+.othermark-p2 {
+    color: #bdc3c7;
+}
+.othermark-history {
+    width: 94%;
+    margin: 20px 3%;
+}
+.othermark-history tr {
+    border-bottom: 12px solid #fff;
+}
+.othermark-history td {
+    padding: 14px 10px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    text-align: center;
+
+    *+border-bottom: 12px solid #fff;
+    background: #f5f5f5;
+}
+.othermark-history td + td + td {
+    text-align: left;
+}
+.othermark-history td span {
+    font-size: 30px;
+    font-style: italic;
+
+    color: #e33555;
+}
+.othermark-history td a {
+    display: block;
+
+    font-weight: bold;
+
+    color: #e33555;
+}

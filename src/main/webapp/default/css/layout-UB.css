@@ -1,0 +1,562 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Judy
+ * @date    2015-05-15 10:35:23
+ *
+ */
+/*---------------------------------- Luckytime ----------------------------------*/
+.luckytime {
+    position: relative;
+
+    display: inline-block;
+    padding: 20px 28px;
+
+    -webkit-perspective: 1200px;
+       -moz-perspective: 1200px;
+        -ms-perspective: 1200px;
+         -o-perspective: 1200px;
+            perspective: 1200px;
+}
+
+.luckytime li {
+    float: left;
+    width: 94px;
+    height: 162px;
+    margin: 0 12px;
+
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+.luckytime li a {
+    position: relative;
+
+    display: block;
+    width: 94px;
+    height: 122px;
+
+    font-size: 32px;
+    line-height: 122px;
+
+    text-align: center;
+    letter-spacing: -2px;
+
+    color: #e33555;
+}
+/*
+.luckytime li a {
+    background: url(../images/luckytime-bg.jpg) 0 0 no-repeat;
+}
+.luckytime li .card2 {
+    background: url(../images/luckytime-bg.jpg) -104px 0 no-repeat;
+}
+.luckytime li .card3 {
+    background: url(../images/luckytime-bg.jpg) -208px 0 no-repeat;
+}
+*/
+.luckytime li a:hover {
+    -webkit-transition: all .3s ease-in;
+       -moz-transition: all .3s ease-in;
+         -o-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+    -webkit-transform: rotateY(45deg);
+       -moz-transform: rotateY(45deg);
+        -ms-transform: rotateY(45deg);
+         -o-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+            transform: none\0;
+}
+.luckytime li .card3:hover {
+    -webkit-transform: scale(1.1,1.1);
+       -moz-transform: scale(1.1,1.1);
+         -o-transform: scale(1.1,1.1);
+            transform: scale(1.1,1.1);
+}
+.luckytime li a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 94px;
+    height: 122px;
+
+    font-size: 32px;
+    line-height: 122px;
+
+    text-align: center;
+    letter-spacing: -2px;
+}
+.luckytime li p {
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+
+    text-align: center;
+
+    color: #bdc3c7;
+}
+.luckyresult {
+    position: absolute;
+    top: 46px;
+    left: 50%;
+    z-index: 2;
+
+    width: 192px;
+    height: 70px;
+    margin-left: -96px;
+
+    font-size: 18px;
+    line-height: 70px;
+
+    -webkit-animation: bounceIn 1s .2s ease both;
+       -moz-animation: bounceIn 1s .2s ease both;
+         -o-animation: bounceIn 1s .2s ease both;
+            animation: bounceIn 1s .2s ease both;
+    text-align: center;
+
+    opacity: .9;
+    background: #fff;
+
+    filter: alpha(opacity=90)
+    background: rgba(255,255,255,.9);
+}
+@keyframes bounceIn {
+    0% {
+        transform: scale(.3);
+
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+
+        opacity: 1;
+    }
+    70% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes bounceIn {
+    0% {
+        -webkit-transform: scale(.3);
+
+        opacity: 0;
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+
+        opacity: 1;
+    }
+    70% {
+        -webkit-transform: scale(.9);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+@-moz-keyframes bounceIn {
+    0% {
+        -moz-transform: scale(.3);
+
+        opacity: 0;
+    }
+    50% {
+        -moz-transform: scale(1.1);
+
+        opacity: 1;
+    }
+    70% {
+        -moz-transform: scale(.9);
+    }
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+
+/*---------------------------------- 财富商城 ----------------------------------*/
+.prize {
+    margin: 20px 8px;
+}
+.prize li {
+    float: left;
+    width: 290px;
+    height: 160px;
+    padding: 10px 13px;
+    margin: 0 5px 13px 5px;
+
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+}
+.prize li .prize-img {
+    display: table-cell;
+    width: 182px;
+    height: 160px;
+
+    text-align: center;
+    vertical-align: middle;
+}
+.prize li .prize-img img {
+    max-width: 182px;
+    max-height: 160px;
+
+    vertical-align: middle;
+}
+.prize li .prize-name {
+    width: 100px;
+    margin-top: 20px;
+    overflow: hidden;
+
+    font-size: 14px;
+    line-height: 2;
+
+    white-space: nowrap;
+}
+.prize li .prize-price {
+    line-height: 2;
+
+    text-indent: 20px;
+
+    color: #f05b72;
+    background: url(../images/icon-ub.png) 0 center no-repeat;
+}
+.prize li .prize-info {
+    width: 100px;
+    overflow: hidden;
+
+    font-size: 14px;
+    line-height: 2;
+
+    white-space: nowrap;
+}
+.prize li .prize-stock {
+    line-height: 2.6;
+
+    color: #bdc3c7;
+}
+.prize li .btn-blue {
+    width: 82px;
+    height: 26px;
+
+    line-height: 26px;
+}
+.prize-menu li {
+    float: left;
+    margin: 0 48px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+.prize-menu li a:hover {
+    text-decoration: underline;
+
+    color: #456;
+}
+
+.prize-add {
+    width: 100%;
+
+    font-size: 14px;
+}
+.prize-add td {
+    height: 50px;
+
+    vertical-align: middle;
+}
+.prize-add .upload {
+    display: block;
+    float: right;
+    width: 180px;
+    height: 160px;
+    margin-right: 80px;
+
+    line-height: 158px;
+
+    text-align: center;
+
+    border: 1px solid #e5e5e5;
+}
+.prize-add .upload img {
+    max-width: 180px;
+    max-height: 160px;
+
+    vertical-align: middle;
+}
+.prize-add input[type="text"],
+.prize-add input[type="number"] {
+    float: left;
+    width: 56%;
+    height: 34px;
+    padding: 0 5px;
+
+    line-height: 34px;
+
+    border: 1px solid #e5e5e5;
+}
+.prize-add span:first-child {
+    display: block;
+    float: left;
+    width: 92px;
+
+    line-height: 36px;
+}
+.prize-add .btn-red {
+    display: block;
+    float: left;
+    width: 94px;
+    margin-left: 92px;
+}
+.prize-add .btn-red:hover {
+    color: #fff;
+}
+.prize-add input[type="radio"] {
+    float: left;
+    margin: 8px 10px 8px 0;
+}
+
+.prize-add td label span {
+    float: left;
+    margin-right: 46px;
+
+    line-height: 36px;
+}
+.prize-add td select {
+    width: 166px;
+    height: 34px;
+    margin-left: -26px;
+
+    line-height: 34px;
+
+    border: 1px solid #e5e5e5;
+
+    -webkit-appearance: menulist;
+       -moz-appearance: menulist;
+            appearance: menulist;
+}
+
+.prize-edit-wrap {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    z-index: 10;
+
+    display: none;
+    width: 684px;
+    padding: 40px 36px;
+    margin-left: -378px;
+
+    background: #f5f5f5;
+}
+.prize-edit .upload {
+    float: left;
+    margin-right: 0;
+}
+.prize-edit .btn-red + .btn-red {
+    margin-left: 36px;
+}
+.prize-edit input[type="text"],
+.prize-edit input[type="number"] {
+    width: 76%;
+}
+.prize-edit td select {
+    width: 172px;
+}
+
+
+/*---------------------------------- My UB ----------------------------------*/
+.myub-nav {
+    width: 94.4%;
+    height: 43px;
+    margin: 0 2.8%;
+}
+.myub-nav li {
+    float: left;
+    height: 43px;
+    margin-right: 28px;
+}
+.myub-nav li a {
+    display: block;
+    padding: 0 10px;
+
+    font-size: 14px;
+    line-height: 40px;
+
+    text-align: center;
+}
+.myub-nav li a:hover {
+    color: #e33555;
+}
+.myub-nav li .thistab {
+    color: #e33555;
+    border-bottom: 3px solid #e33555;
+}
+.myub-nav2 {
+    width: 708px;
+    padding: 20px 146px;
+}
+.myub-nav2 li {
+    float: left;
+    width: 186px;
+    height: 68px;
+    margin: 0 24px;
+
+    font-weight: bold;
+    line-height: 68px;
+
+    border: 1px solid #e6e6e6;
+}
+.myub-nav2 li span {
+    display: block;
+    float: left;
+    width: 50%;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+.myub-nav2 li span + span {
+    font-size: 20px;
+
+    color: #50c8d7;
+}
+.myub-expend {
+    width: 50%;
+    margin: 40px 25%;
+}
+.myub-expend td {
+    width: 16%;
+    height: 50px;
+
+    font-size: 14px;
+    line-height: 3;
+
+    vertical-align: top;
+}
+.myub-expend td + td {
+    width: 84%;
+
+    text-align: right;
+}
+.myub-expend td input,
+.myub-expend td textarea,
+.myub-expend td select {
+    width: 90%;
+    height: 34px;
+    padding: 0 5px;
+    margin-bottom: 14px;
+
+    line-height: 34px;
+
+    border: 1px solid #e5e5e5;
+}
+.myub-expend td textarea {
+    height: 84px;
+
+    line-height: 1.7;
+}
+.myub-expend td .arrow {
+    background: url(../images/arrow-select.png) 96% center no-repeat;
+}
+.select-ul {
+    position: absolute;
+    top: 42px;
+    right: 0;
+
+    display: none;
+    width: 90%;
+    padding: 0 5px;
+
+    border: 1px solid #50c8d7;
+    background: #fff;
+}
+.select-ul li {
+    height: 34px;
+
+    line-height: 34px;
+}
+.select-ul li a {
+    display: block;
+    width: 100%;
+    padding: 0 5px;
+    margin-left: -5px;
+
+    text-align: left;
+}
+.select-ul li a:hover {
+    color: #fff;
+    background: #50c8d7;
+}
+.ub-country {
+    width: 94%;
+    height: auto;
+    margin: 20px 3% 0 3%;
+
+    border-collapse: collapse;
+
+    border: 1px solid #dedede;
+}
+.ub-country td,
+.ub-country th {
+    height: 35px;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #e6e6e6;
+}
+.ub-country thead th {
+    color: #fff;
+}
+.ub-country thead th + th {
+    text-align: left;
+    text-indent: 45px;
+
+    color: #456;
+}
+.ub-country th a {
+    display: block;
+    float: right;
+    height: 16px;
+    margin-right: 20px;
+}
+.ub-country tbody th {
+    color: #456;
+}
+.ub-country td {
+    padding: 0 5px;
+
+    color: #959ea7;
+}
+.ub-country .expend {
+    line-height: 170%;
+
+    text-align: left;
+}
+.Color_country01 {
+    background: #70cdf2;
+}
+.Color_country02 {
+    background: #ac0;
+}
+.Color_country03 {
+    background: #ffb61c;
+}
+.Color_country04 {
+    background: #ca7eca;
+}
+.Color_country05 {
+    background: #ff8080;
+}
+.Color_country06 {
+    background: #b79268;
+}
+.Color_country07 {
+    background: #6cc;
+}

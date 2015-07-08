@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                           http://www.springframework.org/schema/security
+                           http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+  
+    <security:http entry-point-ref="wechatEntryPoint" pattern="/wechat/**">
+       <security:custom-filter ref="wechatSecurityFilter" position="FORM_LOGIN_FILTER"/>
+       <security:intercept-url pattern="/wechat/wxcallback.html" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+       <security:intercept-url pattern="/wechat/kpiauth.html" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+       <security:intercept-url pattern="/wechat/images/*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+	   <security:intercept-url pattern="/wechat/css/*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+       <security:intercept-url pattern="/wechat/**"  access="ROLE_USER,ROLE_ADMIN"/>
+       
+    </security:http>
+    
+	<security:http auto-config="false" entry-point-ref="authenticationProcessingFilterEntryPoint" >
+	  
+	  <security:intercept-url pattern="/default/images/*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+	  <security:intercept-url pattern="/default/css/*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+	  <security:intercept-url pattern="/js/*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+	  <security:intercept-url pattern="/old/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+	  <security:intercept-url pattern="/common/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+	  <security:intercept-url pattern="/panel/*" access="ROLE_ADMIN"/>
+	 
+	  <security:intercept-url pattern="/**"  access="ROLE_USER,ROLE_ADMIN"/>
+	  <!-- 
+	  <security:intercept-url pattern="/home/*" access="ROLE_TEST,ROLE_USER,ROLE_ADMIN"/>
+	  <security:intercept-url pattern="/staff/*" access="ROLE_TEST,ROLE_USER,ROLE_ADMIN"/>
+	  <security:intercept-url pattern="/panel/*" access="ROLE_TEST,ROLE_ADMIN"/>
+	  <security:intercept-url pattern="/service/*" access="ROLE_TEST,ROLE_USER,ROLE_ADMIN"/>
+	  <security:intercept-url pattern="/dwr/*" access="ROLE_TEST,ROLE_USER,ROLE_ADMIN"/>
+	  <security:intercept-url pattern="/wechat/*" access="ROLE_TEST,ROLE_USER,ROLE_ADMIN" />
+	   -->
+	  
+	 
+	  <security:form-login 
+	        login-page="/common/login.html" 
+	        login-processing-url="/kpi_security_check_userpassword" 
+	        password-parameter="kpi_password" 
+	        username-parameter="kpi_username" 	        
+	        authentication-success-handler-ref="kpiAuthenticationSuccessHandler"
+	        authentication-failure-handler-ref="kpiAuthenticationFailureHandler"
+	        authentication-failure-url="/common/login.html?fail=1"
+	       always-use-default-target="false"
+	        />
+	
+	  <security:logout logout-url="/common/logoutProcess" invalidate-session="true" 
+			logout-success-url="/common/login.html" />
+	  <security:remember-me key="kpi_cookie"   services-ref="rememberMeService"/>
+	  <security:access-denied-handler error-page="/common/error.html"/>
+	  
+	  <security:session-management invalid-session-url="/common/login.html"  session-fixation-protection="migrateSession">
+	    <security:concurrency-control max-sessions="1" expired-url="/common/login.html" />
+	  </security:session-management>
+	</security:http>    
+	
+	<security:global-method-security pre-post-annotations="enabled"></security:global-method-security>
+	
+	
+	<bean id="authenticationProcessingFilterEntryPoint"	class="cn.aolc.group.performance.security.KpiAuthenticationEntryPoint">
+		<constructor-arg name="loginFormUrl" value="/common/login.html"></constructor-arg>
+		<property name="forceHttps" value="false" />
+	</bean>
+	
+	
+	<security:authentication-manager alias="authenticationManager">
+	  <security:authentication-provider ref="userPasswordAuthenticationProvider">	    
+	  </security:authentication-provider>	  
+	</security:authentication-manager>	
+	
+	<bean id="kpiAuthenticationFailureHandler" class="cn.aolc.group.performance.security.KpiAuthenticationFailureHandler"></bean>
+	<bean id="kpiAuthenticationSuccessHandler" class="cn.aolc.group.performance.security.KpiAuthenticationSuccessHandler">
+	  <property name="targetUrlParameter" value="kpiredirect"></property>
+	</bean> 
+    
+     <bean id="userPasswordAuthenticationProvider" class="cn.aolc.group.performance.security.KpiDaoAuthenticationProvider">
+        <property name="userDetailsService">
+           <ref bean="userPasswordDetailsService"/>
+        </property>
+        <property name="passwordEncoder">
+           <ref bean="passwordEncoder"/>
+        </property>
+    </bean>
+    
+    <bean id="userPasswordDetailsService" class="cn.aolc.group.performance.security.UserPasswordDetailsService">
+      
+    </bean>  
+    
+    <bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+      <constructor-arg value="256"/>
+    </bean>
+    
+    <bean id="rememberMeService" class="org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices">
+      <constructor-arg name="key" value="kpi_cookie"></constructor-arg>
+      <constructor-arg name="userDetailsService" ref="userPasswordDetailsService"></constructor-arg>
+      <constructor-arg name="tokenRepository" ref="jdbcTokenRepository"></constructor-arg>      
+      <property name="parameter" value="kpi_remember_me"></property>
+    </bean>
+    
+    <bean id="jdbcTokenRepository"
+      class="org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl">  
+      <property name="createTableOnStartup" value="false"></property>
+      <property name="dataSource" ref="dataSource" />
+   </bean>
+   
+    <bean id="wechatEntryPoint"
+         class="cn.aolc.group.performance.weixin.security.WechatAuthenticationEntryPoint">
+         <constructor-arg name="loginFormUrl" value="/wechat/kpiauth.html"></constructor-arg>      
+    </bean>
+    
+    <bean id="wechatSecurityFilter" class="cn.aolc.group.performance.weixin.security.WechatSecurityFilter">
+      <constructor-arg name="defaultFilterProcessesUrl" value="/wechat/**"/>
+      <property name="authenticationManager" ref="wechatAuthenticationManager"></property>    
+      <property name="filterProcessesUrl" value="/wechat/usercheck"></property>    
+      <property name="authenticationSuccessHandler" ref="wechatAuthenticationSuccessHandler"></property>
+      <property name="authenticationFailureHandler" ref="wechatAuthenticationFailureHandler"></property>
+    </bean>
+    
+    <bean id="wechatAuthenticationManager" class="cn.aolc.group.performance.weixin.security.WechatAuthenticationManager"></bean>
+     
+    <bean id="wechatAuthenticationSuccessHandler" class="cn.aolc.group.performance.weixin.security.WechatAuthenticationSuccessHandler">
+      <property name="targetUrlParameter" value="kpiredirect"></property>
+    </bean>
+    <bean id="wechatAuthenticationFailureHandler" class="cn.aolc.group.performance.weixin.security.WechatAuthenticationFailureHandler"></bean>
+    
+   
+</beans>
