@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+ <definition name="service-template" extends="default-template">
+   <put-attribute name="head" value="/default/service/head.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name="service/mycenter/achieve" extends="service-template">
+   <put-attribute name="title" value="个人中心—— 我的成就" cascade="true"></put-attribute>
+   <put-attribute name="content" value="/default/service/achieve.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name="service/mycenter/titles" extends="service-template">
+   <put-attribute name="title" value="个人中心—— 官职俸禄" cascade="true"></put-attribute>
+   <put-attribute name="content" value="/default/service/titles.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name="service/mycenter/organization" extends="service-template">
+   <put-attribute name="title" value="个人中心—— 组织架构" cascade="true"></put-attribute>
+   <put-attribute name="content" value="/default/service/organization.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name="service/mycenter/headicon" extends="service-template">
+   <put-attribute name="title" value="个人中心—— 更换头像" cascade="true"></put-attribute>
+   <put-attribute name="content" value="/default/service/headicon.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name="service/mycenter/pinfo" extends="service-template">
+   <put-attribute name="title" value="个人中心—— 昵称密码" cascade="true"></put-attribute>
+   <put-attribute name="content" value="/default/service/pinfo.jsp"></put-attribute>
+ </definition>
+</tiles-definitions>

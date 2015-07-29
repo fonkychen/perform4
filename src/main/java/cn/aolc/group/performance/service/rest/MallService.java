@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import cn.aolc.group.performance.annotation.UserCoinAdded;
 import cn.aolc.group.performance.dao.tenant.MallOrderRepository;
 import cn.aolc.group.performance.dao.tenant.MallProductRepository;
 import cn.aolc.group.performance.jpa.User;
@@ -25,6 +24,7 @@ import cn.aolc.group.performance.jpa.enumeration.MallProductStatus;
 import cn.aolc.group.performance.jpa.tenant.MallOrder;
 import cn.aolc.group.performance.jpa.tenant.MallProduct;
 import cn.aolc.group.performance.service.mallproduct.MallProductService;
+import cn.aolc.group.performance.sync.UpdateCoinService;
 import cn.aolc.group.performance.util.OperationDef;
 
 @Service("mallService")
@@ -39,6 +39,9 @@ public class MallService extends BaseRestService{
 	
 	@Autowired
 	private MallOrderRepository mallOrderRepository;
+	
+	@Autowired
+	private UpdateCoinService updateCoinService;
 	
 	public MallProduct getProduct(Long productId) throws Exception{
 		return mallProductRepository.findOne(productId);
@@ -128,8 +131,14 @@ public class MallService extends BaseRestService{
 		return mallOrderRepository.save(mo);
 	}
 	
+	/**
+	 * we need to make sure the coin number be well synchronized, the annotation type should not be used here
+	 * @param pid
+	 * @return
+	 * @throws Exception
+	 */
 	@OperationDef("兑换商品")
-	@UserCoinAdded(coinType=CoinType.ShopMall)
+	//@UserCoinAdded(coinType=CoinType.ShopMall)	
 	public synchronized MallOrder orderProduct(Long pid) throws Exception{
 		MallProduct mp=mallProductRepository.findOne(pid);
 		if(mp==null) throw new Exception("invalid product");
@@ -161,8 +170,9 @@ public class MallService extends BaseRestService{
 			mp.setProductStatus(MallProductStatus.OffSale);
 		}
 		mallProductRepository.save(mp);
-		
-		return mallOrderRepository.save(mo);	
+		mo=mallOrderRepository.save(mo);
+		updateCoinService.updateCoinHistory(CoinType.ShopMall, mo);
+		return mo;	
 	
 	}
 	
@@ -177,6 +187,14 @@ public class MallService extends BaseRestService{
 		Sort sort2=new Sort(order.equals("asc")?Direction.ASC:Direction.DESC,"updated");
 		Pageable pageable=new PageRequest(page-1, size, sort1.and(sort2));
 		return mallOrderRepository.findAll(pageable);
+	}
+	
+	public Page<MallOrder> getOrders(User user,Integer page,Integer size,String order) throws Exception{
+		if(user==null)user=getContextUser();
+		Sort sort1=new Sort(Direction.ASC, "checked");
+		Sort sort2=new Sort(order.equals("asc")?Direction.ASC:Direction.DESC,"updated");
+		Pageable pageable=new PageRequest(page-1, size, sort1.and(sort2));
+		return mallOrderRepository.findByOrderUserOrderByUpdatedDesc(user, pageable);
 	}
 
 }

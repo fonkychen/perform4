@@ -1,6 +1,6 @@
 package cn.aolc.group.performance.jpa.enumeration;
 
-public enum CoinType {
+public enum CoinType  {
 	DrumEvent{
 		public String toString(){
 			return "得胜鼓";
@@ -21,6 +21,7 @@ public enum CoinType {
 			return "签到";
 		}
 	},
+	@Deprecated
 	Popular{
 		public String toString(){
 			return "人气英雄";
@@ -99,5 +100,12 @@ public enum CoinType {
 		public String toString(){
 			return "确认任务";
 		}
-	}
+	},
+	PopularAction{
+		public String toString(){
+			return "人气英雄";
+		}
+	};
+	
+	
 }

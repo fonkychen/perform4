@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>KPI邮件通知</title>
+
+<style>
+	html {
+		width: 100%;
+		height: 100%;
+		background: #eee;
+	}
+	.wrap {
+		width: 600px;
+		height: auto;
+		margin: 20px auto;
+		padding: 10px 20px;
+		background: #fff;
+		border-radius: 10px;
+		border:1px solid #e6b02c;
+	}
+	p, a {
+		font-family: Helvetica, Arial, "Microsoft Yahei", "SimSun", sans-serif;
+		font-size: 14px;
+		line-height: 1.5;
+	}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<p><strong>Hi,${username}</strong><br/><br/></p>
+		<p>${message}：</p>
+		<a href="${linkhref}">${linkhref}</a>
+		<p style="color:#ccc; font-size: 12px;">(如果您无法点击此链接，请将它复制到浏览器地址栏后按Enter键访问)</p>
+		<p>为了保证您的帐号安全，该链接24小时内有效，点击一次后失效。</p>
+		<p style="text-align: right;"><br/>谢谢<br />KPI运营团队</p>
+	</div>
+
+</body>
+</html>

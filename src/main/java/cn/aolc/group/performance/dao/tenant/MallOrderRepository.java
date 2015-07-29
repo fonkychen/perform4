@@ -11,9 +11,10 @@ import cn.aolc.group.performance.jpa.tenant.MallOrder;
 @Transactional
 public interface MallOrderRepository extends JpaRepository<MallOrder, Long>{
 	
-	public Page<MallOrder> findByOrderUserAndTenantIdOrderByUpdatedDesc(User orderUser,String tenantId,Pageable pageable);
+	public Page<MallOrder> findByOrderUserOrderByUpdatedDesc(User orderUser,Pageable pageable);
 	
 	public Page<MallOrder> findByTenantIdOrderByCheckedAsc(String tenantId,Pageable pageable);
+	
 	
 	//public Page<MallOrder> findByIdNotNull(Pageable pageable,Sort sort);
 

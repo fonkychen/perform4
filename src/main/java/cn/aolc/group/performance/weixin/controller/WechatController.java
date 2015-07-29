@@ -260,12 +260,12 @@ public class WechatController {
 		//model.addAttribute("selfmarks", userScoredService.getSelfMarks(user, wcm.getStartCal().getTime(), wcm.getEndCal().getTime()));
 		
 		model.addAttribute("handleuser", user);
-		model.addAttribute("usergroup", ouser.getOwnerGroup());
+		model.addAttribute("usergroups", ouser.getOwnerGroups());
 	}	
 	
 	//@RequestMapping("/teamreport")
 	public void teamreport(@AuthenticationPrincipal UserPasswordDetails upd,Model model) throws Exception{
-		//User user=userRepository.findOne(upd.getUser().getId());
+		User user=userRestService.getUserById(upd.getUser().getId());
 		//staffService.countryDailyReport(user, model);
 		//staffService.companyDailyReport(user, model);		
 	}

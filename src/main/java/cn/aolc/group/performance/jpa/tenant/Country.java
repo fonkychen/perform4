@@ -54,7 +54,7 @@ public class Country implements TenantEntity{
 	
 	private List<MonthlyCountryStatis> monthlyCountryStatisList;
 	
-	private List<UserGroup> userGroupList;
+	//private List<UserGroup> userGroupList;
 	
 	private List<MonthlyCountryWealth> monthlyCountryWealthList;
 	
@@ -172,17 +172,17 @@ public class Country implements TenantEntity{
 		this.monthlyCountryStatisList = monthlyCountryStatisList;
 	}
 
-
-	@JsonIgnore
-	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy="country")
-	@OrderBy(" id asc ")
-	public List<UserGroup> getUserGroupList() {
-		return userGroupList;
-	}
-
-	public void setUserGroupList(List<UserGroup> userGroupList) {
-		this.userGroupList = userGroupList;
-	}
+//
+//	@JsonIgnore
+//	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy="country")
+//	@OrderBy(" id asc ")
+//	public List<UserGroup> getUserGroupList() {
+//		return userGroupList;
+//	}
+//
+//	public void setUserGroupList(List<UserGroup> userGroupList) {
+//		this.userGroupList = userGroupList;
+//	}
 
 	@JsonIgnore
 	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy="country")

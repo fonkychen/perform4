@@ -66,9 +66,9 @@ public class CountryService extends BaseRestService{
     			rmcs.setMonthNum(monthNum);
     		}    
     		//init
-    		User user=country.getOwner();
-    		UserGroup ug=user.getOwnerGroup();
-    		if(ug!=null)ug.getUsers().size();
+//    		User user=country.getOwner();
+//    		UserGroup ug=user.getOwnerGroup();
+//    		if(ug!=null)ug.getUsers().size();
     		//
     		retlist.add(rmcs);
     	}    	

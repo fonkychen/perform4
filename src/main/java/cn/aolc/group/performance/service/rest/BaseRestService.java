@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Caching;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.MessageSource;
@@ -20,8 +19,10 @@ import cn.aolc.group.performance.jpa.Company;
 import cn.aolc.group.performance.jpa.User;
 import cn.aolc.group.performance.jpa.WorkOfftime;
 import cn.aolc.group.performance.jpa.WorkOvertime;
+import cn.aolc.group.performance.jpa.enumeration.UserStatus;
 import cn.aolc.group.performance.jpa.enumeration.WorkOvertimeStatus;
 import cn.aolc.group.performance.jpa.tenant.CalendarRecord;
+import cn.aolc.group.performance.jpa.tenant.UserGroup;
 import cn.aolc.group.performance.security.UserPasswordDetails;
 
 /**
@@ -71,24 +72,30 @@ public class BaseRestService implements ApplicationContextAware{
 	
 	
 	public boolean isAuthorized(User superUser,User user){
-		if(superUser.getOwnerGroup()==null)return false;
+		if(superUser.getOwnerGroups()==null || superUser.getOwnerGroups().size()<=0)return false;
 		//for freeman
 		if(user.getUserGroup()==null && superUser.equals(user)) return true;
 		
-		if(user.getUserGroup().equals(superUser.getOwnerGroup())) return true;
+		
+		if(superUser.getOwnerGroups().contains(user.getUserGroup())) return true;
 		
 		boolean isauthorized=false;
 		
-		List<User> susers=superUser.getOwnerGroup().getUsers();
-		for(User suser:susers){
-			if(!isauthorized){
-				isauthorized=isauthorized || isAuthorized(suser, user);
+		List<UserGroup> userGroups=superUser.getOwnerGroups();
+		
+		for(UserGroup ug:userGroups){
+			List<User> susers=ug.getUsers();
+			for(User suser:susers){
+				if(!isauthorized){
+					isauthorized=isauthorized || isAuthorized(suser, user);
+				}
+				else{
+					break;
+				}
+				
 			}
-			else{
-				break;
-			}
-			
 		}
+		
 		return isauthorized;
 		
 	}
@@ -172,10 +179,15 @@ public class BaseRestService implements ApplicationContextAware{
 			else{
 				return false;
 			}
-	    }
-	    
-			
+	    }		
+	}
+	
+	public List<User> getOwnerUsers(User user) throws Exception{
+		if(user==null){
+			user=getContextUser();
+		}
 		
+		return userRepository.findByUserStatusNotAndUserGroupIn(UserStatus.Retired, user.getOwnerGroups());//
 	}
 
 }

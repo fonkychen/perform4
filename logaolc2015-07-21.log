@@ -1,0 +1,26 @@
+七月 21 2015 09:35:06.160 DEBUG [http-bio-80-exec-3] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Creating new persistent login for user Anna@aolc.cn
+七月 21 2015 09:35:06.180 DEBUG [http-bio-80-exec-3] cn.aolc.group.performance.security.KpiAuthenticationSuccessHandler - Found targetUrlParameter in request: /home/index.html
+七月 21 2015 09:35:06.257 DEBUG [http-bio-80-exec-3] cn.aolc.group.performance.util.LogUtil - homecontroller index
+七月 21 2015 10:16:18.829 DEBUG [http-bio-80-exec-10] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Remember-me cookie detected
+七月 21 2015 10:16:18.908 DEBUG [http-bio-80-exec-10] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Refreshing persistent login token for user 'Anna@aolc.cn', series 'BxTRwW8JJIitL6oWsw41MQ=='
+七月 21 2015 10:16:18.953 DEBUG [http-bio-80-exec-10] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Remember-me cookie accepted
+七月 21 2015 10:31:04.843 DEBUG [http-bio-80-exec-1] cn.aolc.group.performance.util.LogUtil - homecontroller index
+七月 21 2015 10:31:06.866 DEBUG [http-bio-80-exec-4] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Logout of user Anna@aolc.cn
+七月 21 2015 10:31:06.866 DEBUG [http-bio-80-exec-4] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Cancelling cookie
+七月 21 2015 10:31:18.017 DEBUG [http-bio-80-exec-4] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Creating new persistent login for user Fonky.chen@aolc.cn
+七月 21 2015 10:31:18.020 DEBUG [http-bio-80-exec-4] cn.aolc.group.performance.security.KpiAuthenticationSuccessHandler - Found targetUrlParameter in request: /home/index.html
+七月 21 2015 10:31:18.085 DEBUG [http-bio-80-exec-4] cn.aolc.group.performance.util.LogUtil - homecontroller index
+七月 21 2015 10:57:38.436 DEBUG [http-bio-80-exec-1] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Remember-me cookie detected
+七月 21 2015 10:57:38.465 DEBUG [http-bio-80-exec-1] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Refreshing persistent login token for user 'Fonky.chen@aolc.cn', series 'mY/R9dwQE3xxCVl1BdmJFA=='
+七月 21 2015 10:57:39.326 DEBUG [http-bio-80-exec-1] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Remember-me cookie accepted
+七月 21 2015 10:57:39.464 DEBUG [http-bio-80-exec-1] cn.aolc.group.performance.util.LogUtil - homecontroller index
+七月 21 2015 17:58:44.701 DEBUG [http-bio-80-exec-4] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Remember-me cookie detected
+七月 21 2015 17:58:54.772 DEBUG [http-bio-80-exec-4] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Refreshing persistent login token for user 'Fonky.chen@aolc.cn', series 'mY/R9dwQE3xxCVl1BdmJFA=='
+七月 21 2015 17:58:54.959 DEBUG [http-bio-80-exec-4] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Remember-me cookie accepted
+七月 21 2015 17:58:55.055 DEBUG [http-bio-80-exec-4] cn.aolc.group.performance.util.LogUtil - homecontroller index
+七月 21 2015 17:59:02.530 DEBUG [http-bio-80-exec-10] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Logout of user Fonky.chen@aolc.cn
+七月 21 2015 17:59:02.530 DEBUG [http-bio-80-exec-10] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Cancelling cookie
+七月 21 2015 17:59:09.626 DEBUG [http-bio-80-exec-10] cn.aolc.group.performance.security.KpiPersistentTokenBasedRememberMeService - Creating new persistent login for user Anna@aolc.cn
+七月 21 2015 17:59:09.630 DEBUG [http-bio-80-exec-10] cn.aolc.group.performance.security.KpiAuthenticationSuccessHandler - Found targetUrlParameter in request: /home/index.html
+七月 21 2015 17:59:09.678 DEBUG [http-bio-80-exec-10] cn.aolc.group.performance.util.LogUtil - homecontroller index
+七月 21 2015 17:59:12.058 DEBUG [http-bio-80-exec-4] cn.aolc.group.performance.util.LogUtil - homecontroller index

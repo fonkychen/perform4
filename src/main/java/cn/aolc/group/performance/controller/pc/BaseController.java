@@ -19,7 +19,7 @@ import cn.aolc.group.performance.security.UserPasswordDetails;
 import cn.aolc.group.performance.service.rest.UserRestService;
 import cn.aolc.group.performance.util.LogUtil;
 
-@ControllerAdvice(basePackages="cn.aolc.group.performance.controller.pc")
+@ControllerAdvice(basePackages={"cn.aolc.group.performance.controller.pc","cn.aolc.group.performance.weixin.controller"})
 public class BaseController {
 	
 	protected Logger logUtil=LoggerFactory.getLogger(BaseController.class);

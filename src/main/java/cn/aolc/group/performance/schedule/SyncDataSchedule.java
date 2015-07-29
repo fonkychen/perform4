@@ -2,6 +2,8 @@ package cn.aolc.group.performance.schedule;
 
 import java.util.Calendar;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -12,13 +14,14 @@ import org.springframework.transaction.annotation.Transactional;
 import cn.aolc.group.performance.model.WeeklyCalendarModel;
 import cn.aolc.group.performance.schedule.service.DailyScheduleService;
 import cn.aolc.group.performance.schedule.service.MonthlyScheduleService;
+import cn.aolc.group.performance.schedule.service.RewardTaskScheduleService;
 import cn.aolc.group.performance.schedule.service.WeeklyScheduleService;
 import cn.aolc.group.performance.util.PerformanceUtil;
 
 @Service
 @Transactional(propagation=Propagation.REQUIRES_NEW)
 public class SyncDataSchedule {
-	//private final static Logger logger=LoggerFactory.getLogger(SyncDataSchedule.class);
+	private final static Logger logger=LoggerFactory.getLogger(SyncDataSchedule.class);
 	
 	@Value("${server.ismaster}")
 	private int isMaster;
@@ -31,12 +34,15 @@ public class SyncDataSchedule {
 	
 	@Autowired
 	private MonthlyScheduleService monthlyScheduleService;
+	
+	@Autowired
+	private RewardTaskScheduleService rewardTaskScheduleService;
 
 	public boolean isMaster() {
 		return isMaster>0;
 	}
 		
-	@Scheduled(cron="0 9 0 * * ?")
+	@Scheduled(cron="0 10 0 * * ?")
 	public void runDailySchedule() throws Exception{
 		if(!isMaster())return;
 		//logger.debug("start runDailySchedule");
@@ -78,19 +84,22 @@ public class SyncDataSchedule {
 	
 	public void runDailySchedule(Integer yearNum,Integer monthNum,Integer dayNum) throws Exception{
 		dailyScheduleService.checkUserData(yearNum, monthNum, dayNum);
+		rewardTaskScheduleService.doDailySchedule();
 	}
 	
 	public void countDailySchedule(Integer yearNum,Integer monthNum,Integer dayNum) throws Exception{
-		dailyScheduleService.countUserData(yearNum, monthNum, dayNum);
+		dailyScheduleService.countUserData(yearNum, monthNum, dayNum);		
 	}
 	
 	public void runWeeklySchedule(Integer yearNum,Integer weekOfYear) throws Exception{
 		weeklyScheduleService.checkUserData(yearNum, weekOfYear);
+		rewardTaskScheduleService.doWeeklySchedule();
 	}
 	
 	public void runMonthlySchedule(Integer yearNum,Integer monthNum) throws Exception{
 		monthlyScheduleService.checkUserData(yearNum, monthNum);
 		monthlyScheduleService.checkCountryData(yearNum, monthNum);
+		rewardTaskScheduleService.doMonthlySchedule();
 	}
 
 }

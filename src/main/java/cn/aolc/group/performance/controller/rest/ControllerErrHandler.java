@@ -25,7 +25,5 @@ public class ControllerErrHandler {
 		logger.debug("rest controller exception", ex);
 		return ex.getMessage();
 	}
-	
-	
 
 }

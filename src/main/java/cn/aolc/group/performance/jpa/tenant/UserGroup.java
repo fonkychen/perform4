@@ -20,6 +20,7 @@ import org.hibernate.annotations.Where;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import cn.aolc.group.performance.jpa.Company;
 import cn.aolc.group.performance.jpa.User;
 import cn.aolc.group.performance.tenant.TenantEntity;
 
@@ -51,13 +52,19 @@ public class UserGroup implements TenantEntity{
 	@Where(clause="user_status_id!='2'")
 	private List<User> users;
 	
-	@OneToOne(mappedBy="ownerGroup",cascade={CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+	//@OneToOne(mappedBy="ownerGroup",cascade={CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
 	//@JoinColumn(name="owner_id")
+	@ManyToOne
+	@JoinColumn(name="owner_id")
 	private User owner;
 	
+//	@ManyToOne
+//	@JoinColumn(name="country_id")
+//	private Country country;
+	
 	@ManyToOne
-	@JoinColumn(name="country_id")
-	private Country country;
+	@JoinColumn(name="company_id")
+	private Company company;
 
 	public Long getId() {
 		return id;
@@ -111,15 +118,24 @@ public class UserGroup implements TenantEntity{
 		this.owner = owner;
 	}
 
+//	@JsonIgnore
+//	public Country getCountry() {
+//		return country;
+//	}
+//
+//	public void setCountry(Country country) {
+//		this.country = country;
+//	}
+	
 	@JsonIgnore
-	public Country getCountry() {
-		return country;
+	public Company getCompany() {
+		return company;
 	}
 
-	public void setCountry(Country country) {
-		this.country = country;
+	public void setCompany(Company company) {
+		this.company = company;
 	}
-	
+
 	public boolean equals(Object o){
 		if(!(o instanceof UserGroup)) return false;
 		

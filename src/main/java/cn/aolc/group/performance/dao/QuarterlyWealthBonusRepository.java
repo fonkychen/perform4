@@ -13,5 +13,7 @@ import cn.aolc.group.performance.jpa.User;
 public interface QuarterlyWealthBonusRepository extends JpaRepository<QuarterlyWealthBonus, Long>{
 	
 	public List<QuarterlyWealthBonus> findByUserAndYearNumAndQuarter(User user,Integer yearNum,Integer quarter);
+	
+	public List<QuarterlyWealthBonus> findByYearNumAndQuarter(Integer yearNum,Integer quarter);
 
 }

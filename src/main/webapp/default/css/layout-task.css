@@ -161,6 +161,7 @@
 }
 .line-back {
     width: 100%;
+    height: 1px;
     margin: 8px 0;
 
     border: none;
@@ -302,4 +303,166 @@
     line-height: 1.5;
 
     color: #959ea7;
+}
+
+/*---------------------------------- 消息中心 ----------------------------------*/
+.noticeheader-wrap {
+    position: relative;
+
+    width: 100%;
+    height: 214px;
+}
+.noticeheader-bg {
+    position: absolute;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background: url(../images/noticeheader-bg.jpg) center center no-repeat;
+}
+.noticeheader-bg img {
+    width: 1000px;
+    height: 214px;
+    overflow: hidden;
+}
+.icon-setbg {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    z-index: 10;
+
+    width: 19px;
+    height: 19px;
+    overflow: hidden;
+
+    background: url(../images/icon-setbg.png) 0 0 no-repeat;
+}
+.icon-setbg:hover {
+    right: 0;
+
+    overflow: visible;
+
+    background: url(../images/icon-setbg.png) -24px 0 no-repeat;
+}
+.noticeheader-p {
+    position: absolute;
+    bottom: 16px;
+    z-index: 10;
+
+    width: 100%;
+
+    font-family: "Simsun";
+    font-size: 14px;
+    line-height: 1.7;
+
+    text-align: center;
+}
+.noticeheader-wrap .headericon {
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    z-index: 10;
+
+    width: 96px;
+    height: 96px;
+    margin-left: -48px;
+
+    border-radius: 50%;
+    background: #fff;
+    background: rgba(255,255,255,.8);
+    box-shadow: 0 0 0 4px rgba(255,255,255,.3);
+}
+.noticeheader-wrap .headericon:hover {
+    box-shadow: 0 0 4px 4px rgba(227,53,85,.3);
+}
+.noticeheader-wrap .headericon img {
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+
+    border-radius: 50%;
+}
+.noticeheader-wrap .hot-flower,
+.noticeheader-wrap .hot-egg {
+    position: absolute;
+    top: 84px;
+    z-index: 10;
+
+    width: 50px;
+    height: 30px;
+    overflow: hidden;
+
+    font-size: 14px;
+    line-height: 30px;
+
+    text-align: right;
+}
+.noticeheader-wrap .hot-flower:hover,
+.noticeheader-wrap .hot-egg:hover {
+    color: #456;
+}
+.noticeheader-wrap .hot-flower {
+    left: 36%;
+
+    background: url(../images/icon-hot.png) 0 -60px no-repeat;
+}
+.noticeheader-wrap .hot-egg {
+    right: 36%;
+
+    background: url(../images/icon-hot.png) 0 0 no-repeat;
+}
+.score-ul {
+    width: 767px;
+    height: 46px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+.score-ul li {
+    float: left;
+    width: 255px;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    text-align: center;
+
+    border-left: 1px solid #bdc3c7;
+}
+.score-ul li:first-child {
+    border: none;
+}
+.subnav-notice {
+    width: 100%;
+    margin: 40px 0;
+}
+.subnav-notice li {
+    float: left;
+}
+.subnav-notice li a {
+    display: block;
+    margin-left: 36px;
+
+    font-size: 14px;
+}
+.subnav-notice li a:hover {
+    color: #e33555;
+}
+.subnav-notice li .thispage {
+    color: #e33555;
+}
+h3 {
+    padding: 0 8px;
+}
+h3 span {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+}
+h3 span + span {
+    float: right;
+
+    font-size: 14px;
+    font-weight: normal;
 }

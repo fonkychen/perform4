@@ -35,13 +35,13 @@ import cn.aolc.group.performance.jpa.enumeration.CoinType;
 import cn.aolc.group.performance.jpa.enumeration.RoleType;
 import cn.aolc.group.performance.jpa.enumeration.UserRewardApplyStatus;
 import cn.aolc.group.performance.jpa.enumeration.UserRewardStatus;
-import cn.aolc.group.performance.jpa.enumeration.UserRewardType;
 import cn.aolc.group.performance.jpa.enumeration.UserTaskSliceApplyStatus;
 import cn.aolc.group.performance.jpa.enumeration.UserTaskSliceStatus;
 import cn.aolc.group.performance.jpa.enumeration.UserTaskStatus;
 import cn.aolc.group.performance.jpa.enumeration.UserTaskType;
 import cn.aolc.group.performance.jpa.tenant.UserReward;
 import cn.aolc.group.performance.jpa.tenant.UserTask;
+import cn.aolc.group.performance.sync.UpdateCoinService;
 
 @Service
 @Transactional(propagation=Propagation.REQUIRED)
@@ -67,6 +67,9 @@ public class RewardTaskService extends BaseRestService{
 	
 	@Autowired
 	private UserTaskSliceResponseRepository userTaskSliceResponseRepository;
+	
+	@Autowired
+	private UpdateCoinService updateCoinService;
 	
 	public UserReward getReward(Long id) throws Exception{
 		return userRewardRepository.findOne(id);
@@ -190,16 +193,19 @@ public class RewardTaskService extends BaseRestService{
 	 * @return
 	 * @throws Exception
 	 */
-	@UserCoinAdded(coinType={CoinType.AcceptReward,CoinType.AcceptRewardOut})
+	//@UserCoinAdded(coinType={CoinType.AcceptReward,CoinType.AcceptRewardOut})
 	public UserRewardApply setRewardApplyStatus(User user,UserRewardApply rewardApply,UserRewardApplyStatus applyStatus) throws Exception{
 		if(user==null)user=getContextUser();
 		if(!user.equals(rewardApply.getUserReward().getByUser())) throw new Exception("Not Allowed");
 		if(applyStatus.equals(UserRewardApplyStatus.NotProcessed) || !rewardApply.getApplyStatus().equals(UserRewardApplyStatus.NotProcessed))throw new Exception("Invalid Operation");
 		if(applyStatus.equals(UserRewardApplyStatus.Accepted)){//check user coin
-			if(user.getUserCoins()<rewardApply.getUserReward().getCoinNum()) throw new Exception("No enough coin");
+			if(user.getUserCoins()<rewardApply.getUserReward().getCoinNum()) throw new Exception("No enough coin");			
 		}
 		rewardApply.setApplyStatus(applyStatus);
-		return userRewardApplyRepository.save(rewardApply);
+		rewardApply=userRewardApplyRepository.save(rewardApply);
+		updateCoinService.updateCoinHistory(CoinType.AcceptRewardOut, rewardApply);
+		updateCoinService.updateCoinHistory(CoinType.AcceptReward, rewardApply);		
+		return rewardApply;
 	}
 	
 	public UserReward closeReward(User user,UserReward userReward) throws Exception{

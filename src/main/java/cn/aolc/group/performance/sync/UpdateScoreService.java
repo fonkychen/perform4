@@ -227,18 +227,21 @@ public class UpdateScoreService {
 		if(user==null){
 			throw new SyncDataException("invalid user");
 		}
-		sh.setUser(user);
-		int gapScore=scoreNum;
-		if(sh.getScore()!=null ){
-			gapScore=gapScore-sh.getScore();
-		}
-		sh.setScore(scoreNum);
-		
-		scoreHistoryRepository.save(sh);
+		synchronized (user) {
+			sh.setUser(user);
+			int gapScore=scoreNum;
+			if(sh.getScore()!=null ){
+				gapScore=gapScore-sh.getScore();
+			}
+			sh.setScore(scoreNum);
+			
+			scoreHistoryRepository.save(sh);
 
-        user.setUserScored((user.getUserScored()==null?0:user.getUserScored())+gapScore);
+	        user.setUserScored((user.getUserScored()==null?0:user.getUserScored())+gapScore);
+			
+			userRepository.save(user);
+		}
 		
-		userRepository.save(user);
 		
 	}
 	

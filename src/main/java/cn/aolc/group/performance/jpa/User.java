@@ -117,9 +117,12 @@ public class User implements EntityWithId{
 	@JoinColumn(name="user_group_id")
 	private UserGroup userGroup;
 	
-	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="owner_group_id")
-	private UserGroup ownerGroup;
+//	@OneToOne(cascade=CascadeType.ALL)
+//	@JoinColumn(name="owner_group_id")
+//	private UserGroup ownerGroup;
+	
+	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy="owner")
+	private List<UserGroup> ownerGroups;
 	
 	@Enumerated(EnumType.ORDINAL)
 	@Column(name="user_status_id")
@@ -376,14 +379,22 @@ public class User implements EntityWithId{
 	public void setUserGroup(UserGroup userGroup) {
 		this.userGroup = userGroup;
 	}
+//
+//	//@JsonIgnore
+//	public UserGroup getOwnerGroup() {
+//		return ownerGroup;
+//	}
+//
+//	public void setOwnerGroup(UserGroup ownerGroup) {
+//		this.ownerGroup = ownerGroup;
+//	}
 
-	//@JsonIgnore
-	public UserGroup getOwnerGroup() {
-		return ownerGroup;
+	public List<UserGroup> getOwnerGroups() {
+		return ownerGroups;
 	}
 
-	public void setOwnerGroup(UserGroup ownerGroup) {
-		this.ownerGroup = ownerGroup;
+	public void setOwnerGroups(List<UserGroup> ownerGroups) {
+		this.ownerGroups = ownerGroups;
 	}
 
 	@JsonIgnore

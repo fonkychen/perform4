@@ -1,6 +1,7 @@
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <script type="text/javascript">
  $(document).ready(function(){
 	 $("a[id^='a_edit_']").click(function(){
@@ -42,7 +43,7 @@
 <div class="bg clearfix">
     	<h2>功勋英雄 〉 指标进度</h2>
 		<p class="dashline-title"><span>调整指标进度：</span>
-		 <c:if test="${(empty user.userGroup) or (not empty user.ownerGroup)  }">
+		 <c:if test="${fn:length(user.ownerGroups) >0  }">
 		 
 		  <button class="btn-blue fr" onclick="window.location.href='/staff/manindicator.html'">主管评测</button>
 		 </c:if>

@@ -105,7 +105,7 @@ function saveTask(yearNum,monthNum,dayNum,userId,typeId){
     			<a href="/staff/dailyboard.html?yearNum=${nextyear }&weekOfYear=${nextweekofyear}" class="arrow right blue rightblue"></a>
     			<!--不可点击时class里去掉blue和rightblue-->
     			<span class="blod"><a href="/staff/dailyboard.html">回本周</a></span>
-    			<c:if test="${not empty user.ownerGroup }">
+    			<c:if test="${(fn:length(user.ownerGroups)) >0 }">
     			 <button class="btn-blue" onclick="window.location.href='/staff/dailyboard/overtime.html'">加班审批</button><!--没加班改为btn-gray-->
     			</c:if>
     			

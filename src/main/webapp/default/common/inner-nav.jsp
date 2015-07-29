@@ -18,7 +18,7 @@ $(document).ready(function(){
                     <li>功勋英雄：</li>
                     <li id="staff_dailyboard"><a href="/staff/dailyboard.html">公事榜</a></li>
                     <li id="staff_selfmark"><a href="/staff/selfmark.html">每日自评</a></li>
-                    <c:if test="${(empty user.userGroup) or (not empty user.ownerGroup)  }">
+                    <c:if test="${(empty user.userGroup) or (not empty user.ownerGroups and (fn:length(user.ownerGroups)) > 0)   }">
                      <li id="staff_comment"><a href="/staff/comment.html">主管点评</a></li>
                     </c:if>
                     
@@ -39,7 +39,7 @@ $(document).ready(function(){
                     <li>飞鸽传书：</li>
                     <li id="connect_reward"><a href="/connect/reward/index.html">悬赏榜</a></li>
                     <li id="connect_task"><a href="/connect/task/index.html">任务中心</a></li>
-                    <li id="connect_drum"><a href="/connect/drum/index.html">得胜鼓</a><sup>N</sup></li>
+                    <li id="connect_drum"><a href="/connect/drum/index.html">得胜鼓</a></li>
                     
                 </ul>
             </li>

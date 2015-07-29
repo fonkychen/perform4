@@ -94,7 +94,7 @@ public class ServiceController {
 	@RequestMapping("/mycenter/organization")
 	public void organization(Model model) throws Exception{
 		User tuser=userRestService.getTopUser(null);
-		if(tuser!=null)	model.addAttribute("usergroup", tuser.getOwnerGroup());
+		if(tuser!=null)	model.addAttribute("usergroups", tuser.getOwnerGroups());
 	}
 	
 	@RequestMapping("/mycenter/pinfo")

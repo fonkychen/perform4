@@ -40,11 +40,15 @@ function savemonthly(id){
 		  isSending=true;
 		  //saveManProgress(Long userId,Long indicatorId,String name,Integer weight,Integer manProgress)
 		  var indicatorId=id.indexOf('empty')>=0?null:id;
+		  var pdata='userId=${handleuser.id}'+'&name='+name+'&weight='+weight+'&manProgress='+progress;
+		  if(indicatorId!=null){
+			  pdata=pdata+'&indicatorId='+indicatorId;
+		  }
 		  //IndicatorInterface.saveManProgress('${user.id}',indicatorId,name,weight,progress,{callback:oncallback});
 		  $.ajax({
 			  url:'/rest/indicator/manprogress/save.html',
 			  type:'POST',
-			  data:'userId=${handleuser.id}&indicatorId='+indicatorId+'&name='+name+'&weight='+weight+'&manProgress='+progress,
+			  data:pdata,
 			  success:oncallback,
 			  error:function(xhr){
 				  alert(xhr.responseText);

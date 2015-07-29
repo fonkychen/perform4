@@ -1,6 +1,7 @@
 package cn.aolc.group.performance.controller.pc;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -83,6 +84,7 @@ public class FunnyController {
 		model.addAttribute("order", order);		
 	}
 	
+	@Secured("ROLE_ADMIN")
 	@RequestMapping("/mall/checkorder")
 	public void checkorder(Model model,@RequestParam(required=false) Integer page,@RequestParam(required=false) String order) throws Exception{
 		if(page==null){

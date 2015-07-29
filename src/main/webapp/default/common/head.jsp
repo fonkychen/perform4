@@ -4,6 +4,5 @@
  <link href="/default/css/base.css" rel="stylesheet">
  <link href="/default/css/common.css" rel="stylesheet">
  <link href="/default/css/layout-KPI.css" rel="stylesheet">
- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
  <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
  <script type="text/javascript" src="/js/kpi.js"></script>

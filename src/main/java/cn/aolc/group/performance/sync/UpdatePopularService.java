@@ -78,18 +78,21 @@ public class UpdatePopularService {
 		}
 		
 		if(user==null) return;
-		int gap=popular;
-		
-		if(ph.getActualPopular()!=null){
-			gap=gap-ph.getActualPopular();
+		synchronized (user) {
+			int gap=popular;
+			
+			if(ph.getActualPopular()!=null){
+				gap=gap-ph.getActualPopular();
+			}
+			
+			ph.setActualPopular(popular);
+			
+			popularHistoryRepository.save(ph);
+			
+			user.setUserPopular((user.getUserPopular()!=null?user.getUserPopular():0)+gap);
+			userRepository.save(user);
 		}
 		
-		ph.setActualPopular(popular);
-		
-		popularHistoryRepository.save(ph);
-		
-		user.setUserPopular((user.getUserPopular()!=null?user.getUserPopular():0)+gap);
-		userRepository.save(user);
 	}
 	
 //	public void updatePopular(PopularType pt,EntityWithId reference) throws Exception{

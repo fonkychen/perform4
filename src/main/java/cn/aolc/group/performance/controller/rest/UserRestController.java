@@ -60,9 +60,9 @@ public class UserRestController {
 	}
 	
 	@RequestMapping("/ownusergroup")
-	public UserGroup getOwnUserGroup(@AuthenticationPrincipal UserPasswordDetails upd) throws Exception{
+	public List<UserGroup> getOwnUserGroup(@AuthenticationPrincipal UserPasswordDetails upd) throws Exception{
 		User user=userRestService.getUserById(upd.getUser().getId());
-		return user.getOwnerGroup();
+		return user.getOwnerGroups();
 	}
 	
 	@RequestMapping("/get")

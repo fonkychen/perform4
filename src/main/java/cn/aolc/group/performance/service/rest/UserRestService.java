@@ -115,8 +115,8 @@ public class UserRestService extends BaseRestService{
 			if(user!=null )if(!isAuthorized(cuser, user)) throw new Exception("没有操作的权限");
 		}	    
 		
-		if(user==null && cuser.getOwnerGroup()!=null ){
-			List<User> ousers=cuser.getOwnerGroup().getUsers();
+		if(user==null && cuser.getOwnerGroups()!=null && cuser.getOwnerGroups().size()>0){
+			List<User> ousers=cuser.getOwnerGroups().get(0).getUsers();
 			if(ousers.size()>0)user=ousers.get(0);
 		}
 		else if(user==null && cuser.getUserGroup()==null){

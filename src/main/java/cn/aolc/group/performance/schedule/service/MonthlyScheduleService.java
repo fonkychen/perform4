@@ -101,6 +101,7 @@ public class MonthlyScheduleService {
 		if(tsh==null) tsh=0;
 		double tfull=0.0d;
 		List<Indicator> indicators=user.getIndicatorList();
+		if(indicators.size()<=0)return;
 		for(Indicator indi:indicators){
 			MonthlyIndicator mi=null;
 			List<MonthlyIndicator> mis=monthlyIndicatorRepository.findByYearNumAndMonthNumAndIndicator(yearNum, monthNum, indi);

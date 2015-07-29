@@ -7,6 +7,7 @@ public enum PopularType {
 		public String toString(){
 			return "送花砸蛋";
 		}
-	}
-
+	};
+	
+	
 }

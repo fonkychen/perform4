@@ -33,7 +33,7 @@
             <ul class="topnav fl">
             	<li><a href="/staff/dailyboard.html">功勋英雄</a></li>
             	<li><a href="/funny/mall/index.html">趣多多</a></li>
-            	<li><a href="">飞鸽传书</a></li>
+            	<li><a href="/connect/reward/index.html">飞鸽传书</a></li>
             	<li><a href="/service/mycenter/pinfo.html">我是中心</a></li>
             </ul>
             

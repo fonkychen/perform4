@@ -11,21 +11,24 @@ function addUserGroup(div,selectedId,targetUrl){
 			if(i==0 ){
 				checkGroup(div,userpath[i],selectedId,targetUrl)
 			}
-			if(userpath[i].ownerGroup == null) {//only add 				
+			if(userpath[i].ownerGroups.length <=0) {//only add 				
 				continue;
 			}
 			var dl='<dl class="managermark-choose clearfix">';
 			dl=dl+'<dt>'+userpath[i].name+'：</dt>';
 			dl=dl+'<dd><ul class="clearfix">';
-			for(var j=0;j<userpath[i].ownerGroup.users.length;j++){
-				if(userpath[i].ownerGroup.users[j].id == selectedId){
-					dl=dl+'<li class="choosed"><a href="'+targetUrl+userpath[i].ownerGroup.users[j].id+'">'+userpath[i].ownerGroup.users[j].name+'</a></li>';
+			for(var u=0;u<userpath[i].ownerGroups.length;u++){
+				for(var j=0;j<userpath[i].ownerGroups[u].users.length;j++){
+					if(userpath[i].ownerGroups[u].users[j].id == selectedId){
+						dl=dl+'<li class="choosed"><a href="'+targetUrl+userpath[i].ownerGroups[u].users[j].id+'">'+userpath[i].ownerGroups[u].users[j].name+'</a></li>';
+					}
+					else{
+						dl=dl+'<li><a href="'+targetUrl+userpath[i].ownerGroups[u].users[j].id+'">'+userpath[i].ownerGroups[u].users[j].name+'</a></li>';
+					}
+					
 				}
-				else{
-					dl=dl+'<li><a href="'+targetUrl+userpath[i].ownerGroup.users[j].id+'">'+userpath[i].ownerGroup.users[j].name+'</a></li>';
-				}
-				
 			}
+			
 			dl=dl+'</ul></dd></dl>';
 			html=html+dl;
 		}
@@ -79,17 +82,21 @@ function retrieveGroupUser(user,userId){
 	
 	
 	
-	if(user.ownerGroup!=null){		
+	if(user.ownerGroups!=null){		
 		
 		userpath.push(user);
 		var flag=false;
-		for(var i=0;i<user.ownerGroup.users.length;i++){
-			
-			if(retrieveGroupUser(user.ownerGroup.users[i],userId))	{
-				flag=true;
-			}	
-			
+		for(var u=0;u<user.ownerGroups.length;u++){
+			var usergroup=user.ownerGroups[u];
+			for(var i=0;i<usergroup.users.length;i++){
+				
+				if(retrieveGroupUser(usergroup.users[i],userId))	{
+					flag=true;
+				}	
+				
+			}
 		}
+		
 		if(!flag){			
 			userpath.pop()
 		}

@@ -59,7 +59,7 @@ public class Company implements EntityWithId{
 	@OrderBy(" id asc ")
 	@Where(clause="user_status_id!='2'")
 	private List<User> users;
-
+	
 	public Long getId() {
 		return id;
 	}

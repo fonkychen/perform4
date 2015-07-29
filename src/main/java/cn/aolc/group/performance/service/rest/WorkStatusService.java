@@ -126,11 +126,12 @@ public class WorkStatusService extends BaseRestService{
 			user=getContextUser();
 			nuser=userRepository.findOne(user.getId());
 		}
-		if(nuser==null || nuser.getOwnerGroup()==null) throw new Exception("没有操作的对象");
+		if(nuser==null || nuser.getOwnerGroups()==null || nuser.getOwnerGroups().size()<=0) throw new Exception("没有操作的对象");
 		
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 		String date=sdf.format(new Date());
-		return workOvertimeRepository.findByDateAfterAndUserIn(date, nuser.getOwnerGroup().getUsers());
+		List<User> ousers=getOwnerUsers(nuser);
+		return workOvertimeRepository.findByDateAfterAndUserIn(date, ousers);
 	}
 	
 	public List<WorkOvertime> getOvertimeToConfirm(Integer yearNum,Integer monthNum,User user) throws Exception{
@@ -139,8 +140,9 @@ public class WorkStatusService extends BaseRestService{
 			user=getContextUser();
 			nuser=userRepository.findOne(user.getId());
 		}
-		if(nuser==null || nuser.getOwnerGroup()==null) throw new Exception("没有操作的对象");
-		return workOvertimeRepository.findByYearNumAndMonthNumAndUserIn(yearNum, monthNum, nuser.getOwnerGroup().getUsers());
+		if(nuser==null || nuser.getOwnerGroups()==null || nuser.getOwnerGroups().size()<=0) throw new Exception("没有操作的对象");
+		List<User> ousers=getOwnerUsers(nuser);
+		return workOvertimeRepository.findByYearNumAndMonthNumAndUserIn(yearNum, monthNum, ousers);
 	}
 	
 	public Page<WorkOvertime> getOvertimeToConfirm(User user,Integer pageNum) throws Exception{
@@ -150,8 +152,9 @@ public class WorkStatusService extends BaseRestService{
 			user=getContextUser();
 			nuser=userRepository.findOne(user.getId());
 		}
-		if(nuser==null || nuser.getOwnerGroup()==null) throw new Exception("没有操作的对象");
-		return workOvertimeRepository.findByUserIn(nuser.getOwnerGroup().getUsers(), pageable);
+		if(nuser==null || nuser.getOwnerGroups()==null || nuser.getOwnerGroups().size()<=0) throw new Exception("没有操作的对象");
+		List<User> ousers=getOwnerUsers(nuser);
+		return workOvertimeRepository.findByUserIn(ousers, pageable);
 		
 	}
 	

@@ -1,6 +1,5 @@
 package cn.aolc.group.performance.jpa.tenant;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;

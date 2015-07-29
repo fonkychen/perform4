@@ -73,7 +73,7 @@
     position: absolute;
     top: 54px;
     right: 132px;
-    z-index: 10;
+    z-index: 100;
 
     display: none;
     width: 124px;

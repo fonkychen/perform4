@@ -45,7 +45,7 @@ public class UserPopularService extends BaseRestService{
 	}
 	
 	@UserPopularAdded(popularType=PopularType.PopularAction)
-	@UserCoinAdded(coinType=CoinType.Popular)
+	@UserCoinAdded(coinType=CoinType.PopularAction)
 	public UserPopularEvent favorUser(Long userId,Integer type,User byUser) throws Exception{
 		User user=userRepository.findOne(userId);
 		if(user==null)throw new Exception("invalid user");

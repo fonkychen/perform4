@@ -22,7 +22,7 @@
                 <tr>
                     <td>${title.rank }</td>
                     <td>${title.name }</td>
-                    <td>0</td>
+                    <td>${title.salaryCoin }</td>
                     <td>${title.bottom }-${title.upper }</td>
                 </tr>
                 </c:forEach>
